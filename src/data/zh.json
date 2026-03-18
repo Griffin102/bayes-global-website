@@ -1,0 +1,133 @@
+{
+  "home": {
+    "title": "贝叶斯环球 Bayes Global",
+    "subtitle": "新兴市场定性招募与实地执行专家",
+    "slogan": "真实人声 深度洞见",
+    "tagline": "Authentic Voices. Deep Insights.",
+    "regions": "拉美 · 亚太 · 中东 · 非洲",
+    "clientButton": "我是客户（中文）",
+    "supplierButton": "我是供应商（English）"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "赋能中国企业出海，深潜新兴市场",
+    "description": "Bayes Global 是一家专注于海外新兴市场（拉美、中东、东南亚等）定性研究招募与实地执行的服务商。公司注册于中国香港，具备国际化的运营平台与合规结算能力。",
+    "mission": "我们致力于跨越巨大的语言与文化鸿沟，通过提供'一站式、高合规、100% 保真'的定性执行服务，为中国出海企业的深度洞察提供最真实的用户声音。"
+  },
+  "leadership": {
+    "title": "创始人",
+    "name": "王高飞 Griffin Wang",
+    "role": "Bayes Global 创始人",
+    "quote": "从业 18 年，我深知在定性研究中，一个假样本就能摧毁所有的洞察逻辑。带着资深研究员的视角，去实现新兴市场受访者的'绝对真实性'，是 Bayes 的核心灵魂。",
+    "background": [
+      "双重背景：曾先后服务于百度、58、TNS（新华信）、零点、艾瑞等互联网公司和国内 TOP 级市场研究机构，历任资深用研、研究经理、项目经理",
+      "前瞻视角：以前瞻性分析师思维审视执行，从风险预判到异常捕捉，打破'设计'与'落地'的壁垒",
+      "质量底线：致力于将严谨的研究逻辑注入海外实地执行，为中国出海企业重新定义数据搜集的高标准"
+    ]
+  },
+  "services": {
+    "title": "服务能力",
+    "subtitle": "一站式全球执行管理",
+    "qualitative": {
+      "title": "定性研究",
+      "items": [
+        "深度访谈 (IDI) - 面对面或在线",
+        "焦点小组 (FGD) - 线上或线下",
+        "陪同购物",
+        "民族志研究"
+      ]
+    },
+    "recruitment": {
+      "title": "招募与设施服务",
+      "items": [
+        "用户/行业专家招募",
+        "专业 FGD/IDI 场地",
+        "线上访谈技术保障",
+        "翻译/同声传译"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "核心优势",
+    "items": [
+      {
+        "title": "一站式全球执行管理",
+        "desc": "客户对接 Bayes 一位 PM，即可穿透管理新兴市场多国家的定性执行，无需面对碎片化、有语言障碍的多国供应商"
+      },
+      {
+        "title": "全流程透明化管控",
+        "desc": "实时进度看板，定性招募名单与排期表全部通过云端链接向客户开放，拒绝'黑盒盲招'"
+      },
+      {
+        "title": "严选全球资源网络",
+        "desc": "三级准入体系：静态文档审核 → 能力面试 → 实战试单，确保供应商质量"
+      },
+      {
+        "title": "多重数据质检体系",
+        "desc": "AI+ 人工双重审核：声纹/人脸识别、语义冲突检测、背景及能力核实"
+      },
+      {
+        "title": "全球合规与风险管理",
+        "desc": "严格遵循 LGPD 等新兴市场国家法规，确保数据隐私与安全"
+      }
+    ]
+  },
+  "coverage": {
+    "title": "全球执行网络",
+    "regions": {
+      "sea": {
+        "name": "东南亚 SEA",
+        "countries": "印尼、泰国、越南、马来西亚"
+      },
+      "latam": {
+        "name": "拉丁美洲 LATAM",
+        "countries": "巴西、墨西哥、阿根廷"
+      },
+      "mea": {
+        "name": "中东 & 非洲 MEA",
+        "countries": "沙特、阿联酋、埃及"
+      },
+      "ondemand": {
+        "name": "按需支持",
+        "countries": "北美 (美国/加拿大)、欧洲 (英法德意)、日韩"
+      }
+    }
+  },
+  "industries": {
+    "title": "行业覆盖",
+    "items": [
+      "智能制造",
+      "跨境电商与消费品牌",
+      "游戏、移动应用与泛娱乐",
+      "生命科学与大健康",
+      "金融",
+      "人工智能与大模型",
+      "新能源与低碳科技",
+      "餐饮连锁与新零售",
+      "教育科技",
+      "社交/新媒体"
+    ]
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "开启您的全球调研之旅",
+    "name": "王高飞 Griffin Wang",
+    "email": "griffin@bayesglobal.com",
+    "phone": "+86 186 0075 4056",
+    "website": "www.bayesglobal.com",
+    "linkedin": "www.linkedin.com/in/griffin-wang",
+    "formName": "姓名",
+    "formCompany": "公司名称",
+    "formEmail": "邮箱",
+    "formPhone": "电话",
+    "formMessage": "项目需求描述",
+    "formSubmit": "发送咨询",
+    "formSuccess": "感谢您的咨询！我们会尽快与您联系。",
+    "formError": "提交失败，请稍后重试或直接发送邮件至 griffin@bayesglobal.com"
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Bayes Global. All rights reserved.",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  }
+}

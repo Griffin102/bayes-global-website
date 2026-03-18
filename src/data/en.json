@@ -1,0 +1,151 @@
+{
+  "home": {
+    "title": "Bayes Global",
+    "subtitle": "Expert in Emerging Market Qualitative Recruitment & Fieldwork",
+    "slogan": "Authentic Voices. Deep Insights.",
+    "tagline": "拉美 · 亚太 · 中东 · 非洲 | LATAM · APAC · MEA · AFRICA",
+    "regions": "LATAM · APAC · MEA · AFRICA",
+    "clientButton": "I'm a Client (中文)",
+    "supplierButton": "I'm a Supplier (English)"
+  },
+  "about": {
+    "title": "About Bayes",
+    "subtitle": "Empowering Chinese Companies Going Global",
+    "description": "Bayes Global is a service provider specializing in qualitative research recruitment and fieldwork execution in emerging overseas markets (Latin America, Middle East, Southeast Asia, etc.). Registered in Hong Kong, China, we have an international operating platform and compliant settlement capabilities.",
+    "mission": "We are committed to bridging significant language and cultural gaps by providing 'one-stop, high-compliance, 100% authentic' qualitative execution services, delivering the most authentic user voices for Chinese companies' deep insights."
+  },
+  "leadership": {
+    "title": "Leadership",
+    "name": "Griffin Wang",
+    "role": "Founder of Bayes Global",
+    "quote": "With 18 years in the industry, I know that one fake respondent can destroy all insight logic in qualitative research. Bringing a senior researcher's perspective to achieve 'absolute authenticity' of respondents in emerging markets is the core soul of Bayes.",
+    "background": [
+      "Dual Background: Previously served at Baidu, 58, TNS, Horizon, iResearch and other top internet companies and market research institutions in China, holding positions as Senior User Researcher, Research Manager, and Project Manager",
+      "Forward-thinking Perspective: Examining execution with an analyst's mindset, from risk prediction to anomaly detection, breaking barriers between 'design' and 'implementation'",
+      "Quality Bottom Line: Committed to injecting rigorous research logic into overseas fieldwork, redefining high standards for data collection for Chinese companies going global"
+    ]
+  },
+  "partner": {
+    "title": "The Partner Advantage",
+    "subtitle": "We eliminate the risks and complexities of working with Chinese clients",
+    "items": [
+      {
+        "title": "100% Payment Security",
+        "desc": "Never worry about chasing an invoice again. As your general contractor, we secure all project funds upfront via our Hong Kong entity, guaranteeing your payments are on time, every time."
+      },
+      {
+        "title": "Access High-Value Projects",
+        "desc": "Stop wasting resources on uncertain leads. We bring you a curated pipeline of pre-qualified projects from China's leading globalizing companies, complete with clear scopes and realistic budgets."
+      },
+      {
+        "title": "Streamlined Partnership",
+        "desc": "We bridge cultural and language gaps, translate client needs into actionable SOWs, and manage the entire project lifecycle for you, acting as your single expert point of contact."
+      }
+    ]
+  },
+  "process": {
+    "title": "Our Simple 3-Step Process",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Receive Project Brief",
+        "desc": "We send you a pre-qualified project brief with a clear SOW. You review and provide your expert quote. No wasted time."
+      },
+      {
+        "num": "02",
+        "title": "Execute Flawlessly",
+        "desc": "Once selected, you focus purely on fieldwork execution. We handle all client communication and project management."
+      },
+      {
+        "num": "03",
+        "title": "Get Paid On Time",
+        "desc": "Upon successful delivery of project milestones, you submit your invoice to us and receive prompt payment directly from our Hong Kong entity."
+      }
+    ]
+  },
+  "requirements": {
+    "title": "Partner Requirements",
+    "subtitle": "We are currently vetting high-quality fieldwork partners globally",
+    "items": [
+      {
+        "title": "Basic Qualifications",
+        "points": [
+          "Company registration proof, business license (not individual workshops)",
+          "Established 3-5+ years preferred",
+          "ESOMAR, MRS (UK), CASRO/IA (US) or similar association membership",
+          "At least 2 industry references"
+        ]
+      },
+      {
+        "title": "Capability & Coverage",
+        "points": [
+          "Own resource database and recruitment network",
+          "Expertise in B2C mass market or B2B high-difficulty populations",
+          "Professional facilities: stable network, qualitative research venues",
+          "Native-level moderators and research-aware translators"
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "points": [
+          "LGPD and local data privacy law compliance",
+          "PII handling procedures and informed consent",
+          "Data storage location and encryption standards"
+        ]
+      },
+      {
+        "title": "Quality Control SOP",
+        "points": [
+          "Three-level screening mechanism",
+          "Pre-interview activation QC with N+50% buffer",
+          "On-site environment QC",
+          "10% audio sampling and bilingual verification"
+        ]
+      }
+    ]
+  },
+  "coverage": {
+    "title": "Global Coverage",
+    "regions": {
+      "sea": {
+        "name": "Southeast Asia (SEA)",
+        "countries": "Indonesia, Thailand, Vietnam, Malaysia"
+      },
+      "latam": {
+        "name": "Latin America (LATAM)",
+        "countries": "Brazil, Mexico, Argentina"
+      },
+      "mea": {
+        "name": "Middle East & Africa (MEA)",
+        "countries": "Saudi Arabia, UAE, Egypt"
+      },
+      "ondemand": {
+        "name": "On-Demand Support",
+        "countries": "North America (US/Canada), Europe (UK/FR/DE/IT), Japan & Korea"
+      }
+    }
+  },
+  "contact": {
+    "title": "Join Our Network",
+    "subtitle": "We invite qualified agencies to apply",
+    "name": "Griffin Wang",
+    "email": "griffin@bayesglobal.com",
+    "phone": "+86 186 0075 4056",
+    "website": "www.bayesglobal.com",
+    "linkedin": "www.linkedin.com/in/griffin-wang",
+    "formName": "Full Name",
+    "formCompany": "Company Name",
+    "formEmail": "Email Address",
+    "formPhone": "Phone Number",
+    "formCountry": "Country/Region",
+    "formMessage": "Tell us about your capabilities",
+    "formSubmit": "Submit Application",
+    "formSuccess": "Thank you for your application! We will review and contact you soon.",
+    "formError": "Submission failed. Please try again or email griffin@bayesglobal.com directly"
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 Bayes Global. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
