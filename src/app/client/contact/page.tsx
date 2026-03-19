@@ -13,7 +13,7 @@ export default function ContactPage() {
     const formData = new FormData(e.currentTarget);
     
     // TODO: Replace with actual Formspree endpoint after setup
-    const FORMSPREE_URL = 'https://formspree.io/f/PLACEHOLDER';
+    const FORMSPREE_URL = 'https://formspree.io/f/myknlrwq';
     
     try {
       const response = await fetch(FORMSPREE_URL, {
