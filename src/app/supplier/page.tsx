@@ -97,15 +97,16 @@ export default function SupplierHome() {
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Join Our Network?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Become a Certified Partner?</h2>
           <p className="text-indigo-100 mb-8">
-            We are currently vetting high-quality fieldwork partners globally
+            We are currently onboarding a limited number of exclusive partners per market. 
+            Secure your position in our global network today.
           </p>
           <Link
             href="/supplier/apply"
             className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
           >
-            Submit Your Application
+            Start Your Application
           </Link>
         </div>
       </section>

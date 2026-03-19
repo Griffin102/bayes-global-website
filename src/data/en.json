@@ -1,133 +1,135 @@
 {
   "home": {
     "title": "Bayes Global",
-    "subtitle": "Expert in Emerging Market Qualitative Recruitment & Fieldwork",
-    "slogan": "Authentic Voices. Deep Insights.",
-    "tagline": "拉美 · 亚太 · 中东 · 非洲 | LATAM · APAC · MEA · AFRICA",
+    "subtitle": "Premium Qualitative Research Execution in Emerging Markets",
+    "slogan": "Authentic Voices. Actionable Insights.",
+    "tagline": "China-Rooted. Globally Integrated. Execution-Excellent.",
     "regions": "LATAM · APAC · MEA · AFRICA",
-    "clientButton": "I'm a Client (中文)",
-    "supplierButton": "I'm a Supplier (English)"
+    "clientButton": "Client Portal (中文)",
+    "supplierButton": "Partner With Us (English)"
   },
   "about": {
-    "title": "About Bayes",
-    "subtitle": "Empowering Chinese Companies Going Global",
-    "description": "Bayes Global is a service provider specializing in qualitative research recruitment and fieldwork execution in emerging overseas markets (Latin America, Middle East, Southeast Asia, etc.). Registered in Hong Kong, China, we have an international operating platform and compliant settlement capabilities.",
-    "mission": "We are committed to bridging significant language and cultural gaps by providing 'one-stop, high-compliance, 100% authentic' qualitative execution services, delivering the most authentic user voices for Chinese companies' deep insights."
+    "title": "About Bayes Global",
+    "subtitle": "Your Trusted Bridge to Emerging Market Insights",
+    "description": "Bayes Global is a Hong Kong-registered research execution partner specializing in qualitative recruitment and fieldwork across high-growth emerging markets (Latin America, Middle East, Southeast Asia, Africa). We combine deep China-market expertise with globally compliant operations, enabling seamless cross-border research delivery.",
+    "mission": "We eliminate language, cultural, and operational barriers by delivering end-to-end qualitative execution services that are 100% compliant, rigorously quality-controlled, and grounded in authentic local voices — empowering Chinese enterprises to make insight-driven global decisions."
   },
   "leadership": {
     "title": "Leadership",
     "name": "Griffin Wang",
-    "role": "Founder of Bayes Global",
-    "quote": "With 18 years in the industry, I know that one fake respondent can destroy all insight logic in qualitative research. Bringing a senior researcher's perspective to achieve 'absolute authenticity' of respondents in emerging markets is the core soul of Bayes.",
+    "role": "Founder & Managing Director",
+    "quote": "In 18 years of research leadership, I've learned that a single inauthentic respondent can invalidate an entire study's insights. At Bayes, we bring senior researcher rigor to every emerging market project — because absolute respondent authenticity isn't optional, it's the foundation of everything we do.",
     "background": [
-      "Dual Background: Previously served at Baidu, 58, TNS, Horizon, iResearch and other top internet companies and market research institutions in China, holding positions as Senior User Researcher, Research Manager, and Project Manager",
-      "Forward-thinking Perspective: Examining execution with an analyst's mindset, from risk prediction to anomaly detection, breaking barriers between 'design' and 'implementation'",
-      "Quality Bottom Line: Committed to injecting rigorous research logic into overseas fieldwork, redefining high standards for data collection for Chinese companies going global"
+      "18+ Years of Dual Expertise: Held senior research and product leadership roles at Baidu, 58.com, TNS, Horizon, and iResearch — bridging internet industry insight with market research methodology",
+      "Research-Driven Execution Philosophy: Applies analyst-level rigor to fieldwork operations, from predictive risk assessment to real-time anomaly detection — eliminating the traditional gap between research design and on-ground implementation",
+      "Uncompromising Quality Standards: Dedicated to embedding rigorous research logic into overseas fieldwork operations, redefining data collection excellence for Chinese enterprises expanding globally"
     ]
   },
   "partner": {
-    "title": "The Partner Advantage",
-    "subtitle": "We eliminate the risks and complexities of working with Chinese clients",
+    "title": "Why Partner with Bayes Global",
+    "subtitle": "Your Gateway to Premium Chinese Research Projects — Zero Payment Risk, Maximum Efficiency",
     "items": [
       {
-        "title": "100% Payment Security",
-        "desc": "Never worry about chasing an invoice again. As your general contractor, we secure all project funds upfront via our Hong Kong entity, guaranteeing your payments are on time, every time."
+        "title": "Guaranteed Payment Security",
+        "desc": "Eliminate payment delays and currency risks entirely. All project funds are secured upfront through our Hong Kong entity with full legal compliance. You invoice us, we pay on agreed terms — no chasing, no exceptions."
       },
       {
-        "title": "Access High-Value Projects",
-        "desc": "Stop wasting resources on uncertain leads. We bring you a curated pipeline of pre-qualified projects from China's leading globalizing companies, complete with clear scopes and realistic budgets."
+        "title": "Exclusive Project Pipeline",
+        "desc": "Gain direct access to pre-qualified, high-budget research projects from China's fastest-growing tech, FMCG, and automotive brands. We vet all opportunities for feasibility and budget realism before they reach you."
       },
       {
-        "title": "Streamlined Partnership",
-        "desc": "We bridge cultural and language gaps, translate client needs into actionable SOWs, and manage the entire project lifecycle for you, acting as your single expert point of contact."
+        "title": "End-to-End Partnership Management",
+        "desc": "We handle everything: client negotiations, scope translation, cultural bridging, and project oversight. You focus on what you do best — flawless fieldwork execution. One point of contact, zero communication gaps."
       }
     ]
   },
   "process": {
-    "title": "Our Simple 3-Step Process",
+    "title": "Seamless Collaboration Workflow",
     "steps": [
       {
         "num": "01",
-        "title": "Receive Project Brief",
-        "desc": "We send you a pre-qualified project brief with a clear SOW. You review and provide your expert quote. No wasted time."
+        "title": "Project Brief & Quotation",
+        "desc": "Receive a detailed project brief with clear objectives, target audience, and deliverables. Review the scope and submit your competitive quote within 48 hours."
       },
       {
         "num": "02",
-        "title": "Execute Flawlessly",
-        "desc": "Once selected, you focus purely on fieldwork execution. We handle all client communication and project management."
+        "title": "Fieldwork Execution",
+        "desc": "Upon selection, execute the project according to our standardized SOP. We provide ongoing support and handle all client communications throughout the fieldwork phase."
       },
       {
         "num": "03",
-        "title": "Get Paid On Time",
-        "desc": "Upon successful delivery of project milestones, you submit your invoice to us and receive prompt payment directly from our Hong Kong entity."
+        "title": "Delivery & Settlement",
+        "desc": "Submit final deliverables and invoice upon milestone completion. Receive payment within 15 business days directly from our Hong Kong entity in your preferred currency."
       }
     ]
   },
   "requirements": {
-    "title": "Partner Requirements",
-    "subtitle": "We are currently vetting high-quality fieldwork partners globally",
+    "title": "Partner Qualification Standards",
+    "subtitle": "We maintain rigorous vetting criteria to ensure world-class execution across all markets",
     "items": [
       {
-        "title": "Basic Qualifications",
+        "title": "Corporate Credentials",
         "points": [
-          "Company registration proof, business license (not individual workshops)",
-          "Established 3-5+ years preferred",
-          "ESOMAR, MRS (UK), CASRO/IA (US) or similar association membership",
-          "At least 2 industry references"
+          "Valid business registration and operational license (corporate entities only, no sole proprietors)",
+          "Minimum 3 years of established market research operations (5+ years preferred)",
+          "Active membership in ESOMAR, MRS (UK), CASRO/IA (US), or equivalent industry associations",
+          "Minimum 2 verifiable client references from international research projects"
         ]
       },
       {
-        "title": "Capability & Coverage",
+        "title": "Operational Capabilities",
         "points": [
-          "Own resource database and recruitment network",
-          "Expertise in B2C mass market or B2B high-difficulty populations",
-          "Professional facilities: stable network, qualitative research venues",
-          "Native-level moderators and research-aware translators"
+          "Proprietary respondent database with active recruitment networks across key regions",
+          "Proven expertise in both B2C mass market and B2B specialized/hard-to-reach populations",
+          "Professional infrastructure: dedicated qualitative research facilities, stable connectivity, recording equipment",
+          "Native-speaking moderators with research methodology training and bilingual project coordinators"
         ]
       },
       {
-        "title": "Security & Compliance",
+        "title": "Data Security & Regulatory Compliance",
         "points": [
-          "LGPD and local data privacy law compliance",
-          "PII handling procedures and informed consent",
-          "Data storage location and encryption standards"
+          "Full compliance with LGPD, GDPR, and local data protection regulations",
+          "Documented PII handling protocols with explicit informed consent procedures",
+          "Secure data storage infrastructure with encryption standards and defined retention policies",
+          "Clear data sovereignty protocols (storage location, cross-border transfer mechanisms)"
         ]
       },
       {
-        "title": "Quality Control SOP",
+        "title": "Rigorous Quality Assurance Framework",
         "points": [
-          "Three-level screening mechanism",
-          "Pre-interview activation QC with N+50% buffer",
-          "On-site environment QC",
-          "10% audio sampling and bilingual verification"
+          "Multi-stage respondent screening (minimum 3-level verification process)",
+          "Pre-session activation QC with N+50% over-recruitment buffer to ensure full attendance",
+          "Real-time on-site environment monitoring and technical quality checks",
+          "Minimum 10% audio/video sampling rate with bilingual verification for accuracy validation",
+          "Post-project debrief and continuous improvement feedback loop"
         ]
       }
     ]
   },
   "coverage": {
-    "title": "Global Coverage",
+    "title": "Strategic Market Coverage",
     "regions": {
       "sea": {
         "name": "Southeast Asia (SEA)",
-        "countries": "Indonesia, Thailand, Vietnam, Malaysia"
+        "countries": "Indonesia • Thailand • Vietnam • Malaysia • Philippines"
       },
       "latam": {
         "name": "Latin America (LATAM)",
-        "countries": "Brazil, Mexico, Argentina"
+        "countries": "Brazil • Mexico • Argentina • Chile • Colombia"
       },
       "mea": {
         "name": "Middle East & Africa (MEA)",
-        "countries": "Saudi Arabia, UAE, Egypt"
+        "countries": "Saudi Arabia • UAE • Egypt • South Africa • Nigeria"
       },
       "ondemand": {
-        "name": "On-Demand Support",
-        "countries": "North America (US/Canada), Europe (UK/FR/DE/IT), Japan & Korea"
+        "name": "Extended Markets (On-Demand)",
+        "countries": "North America (US/CA) • Europe (UK/FR/DE/IT/ES) • Northeast Asia (JP/KR)"
       }
     }
   },
   "contact": {
-    "title": "Join Our Network",
-    "subtitle": "We invite qualified agencies to apply",
+    "title": "Become a Certified Partner",
+    "subtitle": "Join our exclusive network of vetted fieldwork experts",
     "name": "Griffin Wang",
     "email": "griffin@bayesglobal.com",
     "phone": "+86 186 0075 4056",
@@ -135,13 +137,13 @@
     "linkedin": "www.linkedin.com/in/griffin-wang",
     "formName": "Full Name",
     "formCompany": "Company Name",
-    "formEmail": "Email Address",
-    "formPhone": "Phone Number",
-    "formCountry": "Country/Region",
-    "formMessage": "Tell us about your capabilities",
-    "formSubmit": "Submit Application",
-    "formSuccess": "Thank you for your application! We will review and contact you soon.",
-    "formError": "Submission failed. Please try again or email griffin@bayesglobal.com directly"
+    "formEmail": "Business Email Address",
+    "formPhone": "Direct Phone Number",
+    "formCountry": "Primary Country/Region of Operation",
+    "formMessage": "Describe Your Core Capabilities",
+    "formSubmit": "Submit Partnership Application",
+    "formSuccess": "Application received! Our partnership team will review your credentials and contact you within 5 business days.",
+    "formError": "Submission failed. Please retry or contact us directly at griffin@bayesglobal.com"
   },
   "footer": {
     "copyright": "Copyright © 2025 Bayes Global. All rights reserved.",
