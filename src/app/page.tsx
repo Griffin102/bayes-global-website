@@ -4,84 +4,134 @@ import zh from '@/data/zh.json';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* Hero Section */}
-      <div className="text-center px-4 py-16 max-w-4xl mx-auto">
-        {/* Logo / Brand */}
-        <div className="mb-8">
-          <div className="flex justify-center mb-6">
-            <Image
-              src="/logo.png"
-              alt="Bayes Global Logo"
-              width={200}
-              height={200}
-              className="object-contain"
-              priority
-            />
-          </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            {zh.home.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-2">
-            {zh.home.subtitle}
-          </p>
-          <div className="flex items-center justify-center gap-4 text-lg text-gray-500">
-            <span>{zh.home.slogan}</span>
-            <span className="w-2 h-2 bg-gray-400 rounded-full"></span>
-            <span className="italic">{zh.home.tagline}</span>
-          </div>
-          <p className="text-md text-gray-500 mt-4">{zh.home.regions}</p>
-        </div>
-
-        {/* Divider */}
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-12"></div>
-
-        {/* Language/Role Selection */}
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          {/* Client Portal Button */}
-          <Link
-            href="/client"
-            className="group relative px-8 py-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-blue-500 min-w-[280px]"
-          >
-            <div className="text-4xl mb-3">🏢</div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-              {zh.home.clientButton}
-            </h2>
-            <p className="text-sm text-gray-500">
-              了解我们的服务与能力
-            </p>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+    <main className="min-h-screen bg-white">
+      {/* Hero Section - Professional Gradient */}
+      <section className="section-pro-lg bg-gradient-to-br from-[#1E3A8A] via-[#1E4A8F] to-[#2563EB] text-white">
+        <div className="container-pro">
+          <div className="text-center max-w-5xl mx-auto px-4">
+            {/* Logo */}
+            <div className="flex justify-center mb-10">
+              <Image
+                src="/logo.png"
+                alt="Bayes Global Logo"
+                width={180}
+                height={180}
+                className="object-contain"
+                priority
+              />
             </div>
-          </Link>
-
-          {/* Supplier Portal Button */}
-          <Link
-            href="/supplier"
-            className="group relative px-8 py-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-indigo-500 min-w-[280px]"
-          >
-            <div className="text-4xl mb-3">🤝</div>
-            <h2 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
-              {zh.home.supplierButton}
-            </h2>
-            <p className="text-sm text-gray-500">
-              Become Our Partner
+            
+            {/* Main Headline */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+              {zh.home.title}
+            </h1>
+            
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto font-light">
+              {zh.home.subtitle}
             </p>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
-              <svg className="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
+            
+            {/* Slogan & Tagline */}
+            <div className="flex items-center justify-center gap-6 text-lg text-blue-200 mb-4">
+              <span className="font-medium">{zh.home.slogan}</span>
+              <span className="w-1.5 h-1.5 bg-blue-300 rounded-full"></span>
+              <span className="italic font-light">{zh.home.tagline}</span>
             </div>
-          </Link>
-        </div>
+            
+            {/* Regions */}
+            <p className="text-base text-blue-300 font-light tracking-wide">
+              {zh.home.regions}
+            </p>
+            
+            {/* Divider */}
+            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mx-auto my-12 opacity-60"></div>
+            
+            {/* CTA Buttons - Generous Spacing */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
+              {/* Client Portal */}
+              <Link
+                href="/client"
+                className="group relative px-10 py-5 bg-white text-[#1E3A8A] rounded-xl font-semibold 
+                         hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl
+                         min-w-[300px] text-center"
+              >
+                <div className="text-3xl mb-2">🏢</div>
+                <div className="text-lg font-bold">{zh.home.clientButton}</div>
+                <div className="text-sm text-slate-600 font-light mt-1">
+                  了解我们的服务与能力
+                </div>
+                <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                  <svg className="w-5 h-5 text-[#1E3A8A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
 
-        {/* Footer Info */}
-        <div className="mt-16 text-sm text-gray-500">
-          <p>{zh.footer.copyright}</p>
+              {/* Supplier Portal */}
+              <Link
+                href="/supplier"
+                className="group relative px-10 py-5 bg-transparent border-2 border-white text-white rounded-xl font-semibold 
+                         hover:bg-white hover:text-[#1E3A8A] transition-all duration-300 shadow-lg hover:shadow-xl
+                         min-w-[300px] text-center"
+              >
+                <div className="text-3xl mb-2">🤝</div>
+                <div className="text-lg font-bold">{zh.home.supplierButton}</div>
+                <div className="text-sm text-blue-100 font-light mt-1">
+                  Become Our Partner
+                </div>
+                <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Trust Indicators Section - Clean White Space */}
+      <section className="section-pro bg-white">
+        <div className="container-pro">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+            {/* Indicator 1 */}
+            <div className="card-pro p-8 text-center">
+              <div className="text-4xl mb-4">🌍</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Emerging Markets Focus</h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                Deep expertise in LATAM, SEA, MEA, and Africa
+              </p>
+            </div>
+            
+            {/* Indicator 2 */}
+            <div className="card-pro p-8 text-center">
+              <div className="text-4xl mb-4">✅</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">100% Authentic Voices</h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                Rigorous quality control for genuine insights
+              </p>
+            </div>
+            
+            {/* Indicator 3 */}
+            <div className="card-pro p-8 text-center">
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Global Compliance</h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                LGPD, GDPR compliant operations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-slate-50 border-t border-slate-200">
+        <div className="container-pro">
+          <div className="text-center text-slate-500 text-sm">
+            <p>{zh.footer.copyright}</p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
