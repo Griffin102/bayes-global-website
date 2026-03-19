@@ -62,7 +62,7 @@ export default function AboutPage() {
           >
             griffin@bayesglobal.com
           </a>
-          <p className="text-gray-500 mt-2">+86 186 0075 4056</p>
+          
         </div>
       </section>
     </main>

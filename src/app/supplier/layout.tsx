@@ -49,7 +49,7 @@ export default function SupplierLayout({
       <footer className="bg-gray-900 text-gray-400 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 text-center text-sm">
           <p>Copyright © 2025 Bayes Global. All rights reserved.</p>
-          <p className="mt-2">griffin@bayesglobal.com | +86 186 0075 4056</p>
+          <p className="mt-2">griffin@bayesglobal.com</p>
         </div>
       </footer>
     </div>
