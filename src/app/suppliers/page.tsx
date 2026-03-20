@@ -1,5 +1,4 @@
-import { ShieldCheck, TrendingUp, Handshake, FileText, Rocket, Clock } from "lucide-react";
-import Link from "next/link";
+import { ShieldCheck, TrendingUp, Handshake, FileText, Rocket, Clock, Zap } from "lucide-react";
 
 export default function SuppliersPage() {
   return (
@@ -25,7 +24,7 @@ export default function SuppliersPage() {
             </p>
             
             <a
-              href="mailto:griffin@bayesglobal.com"
+              href="#supplier-form"
               className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-emerald-900/50 hover:shadow-xl"
             >
               Apply to Join Our Network
@@ -140,20 +139,121 @@ export default function SuppliersPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-emerald-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Partner With Us?</h2>
-          <p className="text-xl text-slate-300 mb-10 leading-relaxed">
-            Join our network of trusted fieldwork partners. Whether you specialize in recruitment, data collection, or full-service execution, we have projects that match your expertise.
-          </p>
-          <a
-            href="mailto:griffin@bayesglobal.com"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-900 hover:bg-slate-100 rounded-xl font-medium transition-all shadow-lg"
-          >
-            Apply to Join Our Network
-            <Rocket className="w-5 h-5" />
-          </a>
+      {/* Supplier Application Form */}
+      <section id="supplier-form" className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Apply to Join Our Network</h2>
+            <p className="text-slate-600">Tell us about your agency. We'll review your application and get back to you within 48 hours.</p>
+          </div>
+
+          <form action="https://formspree.io/f/myknlrwq" method="POST" className="bg-gray-50 p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100">
+            {/* Hidden Field */}
+            <input type="hidden" name="Form_Source" value="【Global Supplier-Application】" />
+
+            {/* Company Legal Name */}
+            <div className="mb-6">
+              <label htmlFor="supplier-company" className="block text-sm font-medium text-slate-700 mb-2">
+                Company Legal Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="supplier-company"
+                name="Company_Name"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none"
+                placeholder="e.g., XYZ Research Ltd."
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              {/* Country */}
+              <div>
+                <label htmlFor="supplier-country" className="block text-sm font-medium text-slate-700 mb-2">
+                  Country (HQ) <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="supplier-country"
+                  name="Country"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none"
+                  placeholder="e.g., Brazil"
+                />
+              </div>
+
+              {/* Website */}
+              <div>
+                <label htmlFor="supplier-website" className="block text-sm font-medium text-slate-700 mb-2">
+                  Company Website <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="url"
+                  id="supplier-website"
+                  name="Website"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none"
+                  placeholder="https://yourcompany.com"
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              {/* Your Name */}
+              <div>
+                <label htmlFor="supplier-name" className="block text-sm font-medium text-slate-700 mb-2">
+                  Your Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="supplier-name"
+                  name="Contact_Name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none"
+                  placeholder="Your full name"
+                />
+              </div>
+
+              {/* Your Email */}
+              <div>
+                <label htmlFor="supplier-email" className="block text-sm font-medium text-slate-700 mb-2">
+                  Your Work Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="supplier-email"
+                  name="Contact_Email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none"
+                  placeholder="you@yourcompany.com"
+                />
+              </div>
+            </div>
+
+            {/* Specialties */}
+            <div className="mb-8">
+              <label htmlFor="supplier-specialties" className="block text-sm font-medium text-slate-700 mb-2">
+                Your Agency's Key Specialties <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="supplier-specialties"
+                name="Specialties"
+                required
+                rows={5}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all outline-none resize-none"
+                placeholder="e.g., Qualitative research, quantitative surveys, UX research, healthcare studies, B2B recruitment, etc."
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-emerald-900/30 hover:shadow-xl flex items-center justify-center gap-2"
+            >
+              Submit Application
+              <Zap className="w-5 h-5" />
+            </button>
+          </form>
         </div>
       </section>
 

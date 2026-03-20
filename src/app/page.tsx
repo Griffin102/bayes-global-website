@@ -1,4 +1,4 @@
-import { ShieldCheck, Users, Globe2, Zap, CheckCircle, AlertTriangle, BarChart3, Eye, Brain, Lock } from "lucide-react";
+import { ShieldCheck, Users, Globe2, Zap, CheckCircle, AlertTriangle, Brain, Lock } from "lucide-react";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
             </p>
             
             <a
-              href="mailto:griffin@bayesglobal.com"
+              href="#client-form"
               className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-blue-900/50 hover:shadow-xl"
             >
               提交项目需求
@@ -93,7 +93,7 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
-                  <Eye className="w-6 h-6 text-red-600" />
+                  <AlertTriangle className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">黑盒盲招 & 质量失控</h3>
               </div>
@@ -115,7 +115,7 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
-                  <Lock className="w-6 h-6 text-red-600" />
+                  <AlertTriangle className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">合规严苛 & 文化雷区</h3>
               </div>
@@ -232,6 +232,92 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Client Contact Form */}
+      <section id="client-form" className="py-24 bg-gray-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">提交项目需求</h2>
+            <p className="text-slate-600">告诉我们您的研究需求，我们会在 24 小时内与您联系。</p>
+          </div>
+
+          <form action="https://formspree.io/f/myknlrwq" method="POST" className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100">
+            {/* Hidden Field */}
+            <input type="hidden" name="Form_Source" value="【中国出海客户 - 项目需求】" />
+
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              {/* Name */}
+              <div>
+                <label htmlFor="client-name" className="block text-sm font-medium text-slate-700 mb-2">
+                  姓名 <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="client-name"
+                  name="Name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                  placeholder="请输入您的姓名"
+                />
+              </div>
+
+              {/* Company */}
+              <div>
+                <label htmlFor="client-company" className="block text-sm font-medium text-slate-700 mb-2">
+                  公司名称 <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="client-company"
+                  name="Company"
+                  required
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                  placeholder="请输入公司名称"
+                />
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="mb-6">
+              <label htmlFor="client-email" className="block text-sm font-medium text-slate-700 mb-2">
+                工作邮箱 <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="email"
+                id="client-email"
+                name="Email"
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
+                placeholder="name@company.com"
+              />
+            </div>
+
+            {/* Project Description */}
+            <div className="mb-8">
+              <label htmlFor="client-message" className="block text-sm font-medium text-slate-700 mb-2">
+                项目需求简述 <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="client-message"
+                name="Message"
+                required
+                rows={5}
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none resize-none"
+                placeholder="请简要描述您的研究目标、目标市场、样本需求等信息..."
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-blue-900/30 hover:shadow-xl flex items-center justify-center gap-2"
+            >
+              发送项目需求
+              <Zap className="w-5 h-5" />
+            </button>
+          </form>
         </div>
       </section>
 
