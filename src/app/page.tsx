@@ -40,19 +40,19 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">15+</div>
-              <div className="text-sm text-slate-500 font-medium">Emerging Markets</div>
+              <div className="text-sm text-slate-500 font-medium">新兴市场深度覆盖</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">100%</div>
-              <div className="text-sm text-slate-500 font-medium">Payment Security</div>
+              <div className="text-sm text-slate-500 font-medium">真实回访与本土核验</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-slate-900 mb-2">3-Layer</div>
-              <div className="text-sm text-slate-500 font-medium">QA System</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">3 层</div>
+              <div className="text-sm text-slate-500 font-medium">极其严苛的防欺诈质控</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">0</div>
-              <div className="text-sm text-slate-500 font-medium">Compliance Issues</div>
+              <div className="text-sm text-slate-500 font-medium">文化盲区与合规风险</div>
             </div>
           </div>
         </div>
@@ -327,7 +327,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-2xl font-bold text-slate-900 mb-4 md:mb-0">Bayes Global</div>
             <div className="text-sm text-slate-500">
-              © {new Date().getFullYear()} Bayes Global. Specialized Qualitative Fieldwork in Emerging Markets.
+              © {new Date().getFullYear()} Bayes Global. 专注海外新兴市场定性招募与实地执行。
             </div>
           </div>
         </div>
