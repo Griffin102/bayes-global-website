@@ -1,172 +1,251 @@
-// src/app/page.tsx
-import { Globe2, Users, ShieldCheck, ArrowRight, MapPin, Zap, Target, LineChart } from "lucide-react";
-import Link from 'next/link';
+import { ShieldCheck, Users, Globe2, Zap, CheckCircle, AlertTriangle, BarChart3, Eye, Brain, Lock } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      {/* 1. 导航栏 (极简风格) */}
-      <header className="absolute top-0 w-full z-50 px-6 py-6 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-white tracking-tight">Bayes Global.</div>
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-white/80">
-            <Link href="#clients" className="hover:text-white transition">For Clients</Link>
-            <Link href="#suppliers" className="hover:text-white transition">For Suppliers</Link>
-            <Link href="#markets" className="hover:text-white transition">Global Markets</Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* 2. 英雄区域 (Hero Section) - Trust Blue 质感 */}
-      <section className="relative pt-40 pb-32 bg-[#0A192F] overflow-hidden">
-        {/* 背景装饰图案 */}
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-sm font-medium mb-8">
-            <Zap className="w-4 h-4" /> Pure-play Fieldwork Specialists
-          </div>
-
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mb-6">
-            Flawless Execution in <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              Emerging Markets
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
-            我们只做最硬核的实地执行与招募。为出海企业找到最真实的本地声音，为全球优质供应商提供稳定的项目桥梁。
-          </p>
-
-          {/* 双通道 CTA (Call to Action) */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">
-            <Link href="#clients" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium flex items-center justify-center transition-all shadow-lg shadow-blue-900/50 group">
-              我是出海客户 (For Clients) 
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link href="#suppliers" className="px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/20 rounded-xl font-medium flex items-center justify-center transition-all backdrop-blur-sm">
-              我是实地供应商 (For Suppliers)
-            </Link>
+        <div className="max-w-7xl mx-auto px-6 py-32 relative z-10">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-sm font-medium mb-6">
+              <Globe2 className="w-4 h-4" /> Emerging Markets Specialists
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+              赋能中国企业出海<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                深潜新兴市场
+              </span>
+            </h1>
+            
+            <p className="text-xl text-slate-300 leading-relaxed mb-10 max-w-3xl">
+              我们专注于拉美、亚太、中东与非洲的定性研究招募与实地执行。跨越语言与文化鸿沟，为您提供一站式、高合规、100% 保真的真实用户声音 (Authentic Voices)。
+            </p>
+            
+            <a
+              href="mailto:griffin@bayesglobal.com"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-blue-900/50 hover:shadow-xl"
+            >
+              提交项目需求
+              <Zap className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
 
-      {/* 3. 数据条 (Stats) */}
+      {/* Stats Bar */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-100 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">15+</div>
               <div className="text-sm text-slate-500 font-medium">Emerging Markets</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">100%</div>
-              <div className="text-sm text-slate-500 font-medium">Native QC Review</div>
+              <div className="text-sm text-slate-500 font-medium">Payment Security</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-slate-900 mb-2">B2B & B2C</div>
-              <div className="text-sm text-slate-500 font-medium">Hard-to-reach Profiles</div>
+              <div className="text-4xl font-bold text-slate-900 mb-2">3-Layer</div>
+              <div className="text-sm text-slate-500 font-medium">QA System</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-slate-900 mb-2">0</div>
-              <div className="text-sm text-slate-500 font-medium">Consulting BS</div>
+              <div className="text-sm text-slate-500 font-medium">Compliance Issues</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. 双边价值主张 (Dual Value Proposition) */}
+      {/* Pain Points vs Solutions */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">连接真实需求与卓越执行</h2>
-            <p className="text-slate-600">无论你是寻找高质量数据的调研机构，还是拥有本地招募能力的实地团队，Bayes Global 都是你的枢纽。</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">为什么选择 Bayes Global</h2>
+            <p className="text-slate-600">我们理解中国出海企业在新兴市场面临的核心挑战，并提供经过验证的解决方案。</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* 客户卡片 */}
-            <div id="clients" className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8">
-                <Target className="w-7 h-7 text-blue-600" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Pain Point 1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                  <AlertTriangle className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">招募极难 & 高爽约</h3>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">For Clients / 调研机构 & 大厂</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
-                无需对接无数个黑盒外包。我们提供从拉美到中东的统一质量标准。严格的录音抽查、100% 回访验证，确保每一个 Insight 都源自真实的 Authentic Voices。
+              <p className="text-slate-600 mb-6 text-sm">
+                新兴市场 B2B/医疗等稀缺人群触达困难，传统供应商储备不足导致高爽约率。
               </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-slate-700 font-medium">
-                  <ShieldCheck className="w-5 h-5 text-emerald-500 mr-3" /> 多重质控审核机制 (Multi-layer QC)
-                </li>
-                <li className="flex items-center text-slate-700 font-medium">
-                  <LineChart className="w-5 h-5 text-emerald-500 mr-3" /> 极速招募 B2B/医疗等难触达人群
-                </li>
-              </ul>
-              <Link href="/contact" className="text-blue-600 font-semibold flex items-center hover:text-blue-700">
-                提交项目需求 <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600" />
+                  <span className="font-semibold text-emerald-900 text-sm">Bayes 方案</span>
+                </div>
+                <p className="text-emerald-800 text-sm">
+                  N+50% 冗余储备，三级提醒 SOP，专业的多语种/稀缺人群触达能力。
+                </p>
+              </div>
             </div>
 
-            {/* 供应商卡片 */}
-            <div id="suppliers" className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-              <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-8">
-                <Users className="w-7 h-7 text-emerald-600" />
+            {/* Pain Point 2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">黑盒盲招 & 质量失控</h3>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">For Suppliers / 实地与招募团队</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
-                成为 Bayes Global 的认证执行网络。我们为你对接中国及全球顶尖出海企业的海量项目，提供清晰的项目简报 (Briefing) 和可靠的付款周期。
+              <p className="text-slate-600 mb-6 text-sm">
+                供应商执行过程不透明，无法实时追踪进度，交付质量难以把控。
               </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-slate-700 font-medium">
-                  <Globe2 className="w-5 h-5 text-blue-500 mr-3" /> 对接全球优质客户资源
-                </li>
-                <li className="flex items-center text-slate-700 font-medium">
-                  <Zap className="w-5 h-5 text-blue-500 mr-3" /> 规范化的作业流程与按时结算
-                </li>
-              </ul>
-              <Link href="/contact-supplier" className="text-emerald-600 font-semibold flex items-center hover:text-emerald-700">
-                申请成为供应商 <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600" />
+                  <span className="font-semibold text-emerald-900 text-sm">Bayes 方案</span>
+                </div>
+                <p className="text-emerald-800 text-sm">
+                  全流程透明化看板 (Live Status Dashboard)，背景资料实时更新，随时可查。
+                </p>
+              </div>
+            </div>
+
+            {/* Pain Point 3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+                  <Lock className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900">合规严苛 & 文化雷区</h3>
+              </div>
+              <p className="text-slate-600 mb-6 text-sm">
+                各国数据隐私法规复杂，文化差异导致调研设计出现政治/宗教敏感问题。
+              </p>
+              <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600" />
+                  <span className="font-semibold text-emerald-900 text-sm">Bayes 方案</span>
+                </div>
+                <p className="text-emerald-800 text-sm">
+                  严格遵循 LGPD 等数据隐私法规，Kick-off 阶段本地化预警，政治红线审查。
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. 覆盖区域展示 (Global Footprint) */}
-      <section id="markets" className="py-24 bg-white">
+      {/* Triple QA System */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Emerging Markets Coverage</h2>
-              <p className="text-slate-600 max-w-xl">我们专注于增长最快、但也最需要本地资源落地的新兴市场。</p>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">三重质控体系 (Multi-Layered QA)</h2>
+            <p className="text-slate-600">每一层都有独立的验证机制，确保样本质量 100% 可靠。</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* QA Layer 1 */}
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                1
+              </div>
+              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 h-full">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                  <Users className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">人工核实</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  社交轨迹调查，访前验真与语言测试。我们的本地团队会验证受访者的社交媒体真实性，并进行预访谈确保语言能力达标。
+                </p>
+              </div>
             </div>
+
+            {/* QA Layer 2 */}
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                2
+              </div>
+              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 h-full">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                  <Brain className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">技术排查</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  AI 声纹/人脸防欺诈，语义冲突检测，杜绝职业受访者。我们使用先进的 AI 工具识别异常模式，确保每个样本都是真实用户。
+                </p>
+              </div>
+            </div>
+
+            {/* QA Layer 3 */}
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                3
+              </div>
+              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 h-full">
+                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                  <ShieldCheck className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">最终兜底</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  不合格样本免费重招，信用扣分机制。如果任何样本在客户审核阶段被发现不合格，我们免费重新招募并承担全部责任。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Reach */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold mb-4">全球执行网络 (Global Reach)</h2>
+            <p className="text-slate-400">我们专注于增长最快、但也最需要本地资源落地的新兴市场。</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {['Latin America (拉美)', 'APAC (亚太)', 'Middle East & Africa (中东非)'].map((region, idx) => (
-              <div key={idx} className="group relative h-64 rounded-2xl overflow-hidden bg-slate-900">
-                {/* 占位背景图 - 之后可以替换为真实人文照片 */}
-                <div className="absolute inset-0 bg-slate-800 group-hover:scale-105 transition-transform duration-700"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent opacity-90"></div>
-                <div className="absolute bottom-6 left-6">
-                  <MapPin className="w-6 h-6 text-white mb-2" />
-                  <h4 className="text-xl font-bold text-white">{region}</h4>
-                </div>
+            <div className="group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <Globe2 className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-2xl font-bold mb-2">拉美 (Latin America)</h4>
+                <p className="text-slate-300 text-sm">巴西、墨西哥、阿根廷、智利、哥伦比亚</p>
               </div>
-            ))}
+            </div>
+
+            <div className="group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-600 to-emerald-800">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <Globe2 className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-2xl font-bold mb-2">亚太 (APAC)</h4>
+                <p className="text-slate-300 text-sm">印尼、泰国、越南、菲律宾、马来西亚</p>
+              </div>
+            </div>
+
+            <div className="group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <Globe2 className="w-8 h-8 text-white mb-3" />
+                <h4 className="text-2xl font-bold mb-2">中东非 (MEA)</h4>
+                <p className="text-slate-300 text-sm">沙特、阿联酋、南非、尼日利亚、肯尼亚</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 6. Footer */}
-      <footer className="bg-[#0A192F] text-slate-400 py-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-2xl font-bold text-white mb-4 md:mb-0">Bayes Global.</div>
-          <div className="text-sm">
-            © {new Date().getFullYear()} Bayes Global. Specialized Qualitative Fieldwork.
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-100 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-2xl font-bold text-slate-900 mb-4 md:mb-0">Bayes Global</div>
+            <div className="text-sm text-slate-500">
+              © {new Date().getFullYear()} Bayes Global. Specialized Qualitative Fieldwork in Emerging Markets.
+            </div>
           </div>
         </div>
       </footer>
-    </main>
+    </div>
   );
 }
