@@ -21,10 +21,15 @@ export default async function InsightArticlePage({ params }: PageProps) {
     notFound();
   }
 
-  // Parse content: convert **text** to <strong> and \n\n to paragraphs
+  // Parse content: convert markdown to React elements
   const parseContent = (content: string) => {
     const paragraphs = content.split("\n\n").filter((p) => p.trim());
     return paragraphs.map((paragraph, idx) => {
+      // Handle horizontal rule
+      if (paragraph.trim() === "---") {
+        return <hr key={idx} className="my-8 border-gray-200" />;
+      }
+      
       // Handle headers
       if (paragraph.startsWith("## ")) {
         return (
@@ -40,7 +45,31 @@ export default async function InsightArticlePage({ params }: PageProps) {
           </h3>
         );
       }
-      // Handle bold text
+      
+      // Handle bullet lists
+      if (paragraph.startsWith("- **") || paragraph.startsWith("- ")) {
+        const listItems = paragraph.split("\n").filter((line) => line.startsWith("- "));
+        return (
+          <ul key={idx} className="list-disc list-inside space-y-2 mb-4 ml-4">
+            {listItems.map((item, i) => {
+              const text = item.replace("- ", "");
+              const parts = text.split(/(\*\*.*?\*\*)/g);
+              return (
+                <li key={i} className="text-slate-700 leading-relaxed">
+                  {parts.map((part, j) => {
+                    if (part.startsWith("**") && part.endsWith("**")) {
+                      return <strong key={j}>{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
+                </li>
+              );
+            })}
+          </ul>
+        );
+      }
+      
+      // Handle bold text in paragraphs
       const parts = paragraph.split(/(\*\*.*?\*\*)/g);
       return (
         <p key={idx} className="text-slate-700 leading-relaxed mb-4">
@@ -58,7 +87,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
   return (
     <div className="min-h-screen">
       {/* Back Button */}
-      <div className="bg-white border-b border-gray-100">
+      <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link
             href="/#insights"
@@ -70,14 +99,14 @@ export default async function InsightArticlePage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Hero with Cover Image */}
+      {/* Hero with Cover Image - 减少 padding-top */}
       <section className="relative">
-        <div className="absolute inset-0 h-96 bg-gradient-to-b from-slate-900/80 to-slate-900/40 z-10"></div>
+        <div className="absolute inset-0 h-[400px] bg-gradient-to-b from-slate-900/80 to-slate-900/40 z-10"></div>
         <div
-          className="absolute inset-0 h-96 bg-cover bg-center"
+          className="absolute inset-0 h-[400px] bg-cover bg-center"
           style={{ backgroundImage: `url(${article.coverImage})` }}
         ></div>
-        <div className="relative z-20 max-w-4xl mx-auto px-6 pt-48 pb-12">
+        <div className="relative z-20 max-w-4xl mx-auto px-6 pt-24 pb-12">
           <div className="flex flex-wrap gap-3 mb-6">
             {article.tags.map((tag, idx) => (
               <span
@@ -108,12 +137,12 @@ export default async function InsightArticlePage({ params }: PageProps) {
       {/* Article Content */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          {/* Excerpt */}
+          {/* Excerpt - 仅显示一次，不重复 */}
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl mb-12">
             <p className="text-lg text-slate-800 font-medium mb-2">
               {article.excerpt}
             </p>
-            <p className="text-slate-600">{article.excerptEn}</p>
+            <p className="text-slate-600 text-sm">{article.excerptEn}</p>
           </div>
 
           {/* Main Content - Chinese */}

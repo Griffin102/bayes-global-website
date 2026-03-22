@@ -11,8 +11,9 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow">
-        {/* 区块 1：Hero 首屏 - 保留现有排版 */}
+        {/* 区块 1：Hero 首屏 - 删除小标签，增加行距，更换背景视频 */}
         <section className="relative h-screen min-h-[800px] text-white overflow-hidden">
+          {/* 深色动态代码网络视频背景 */}
           <video
             autoPlay
             loop
@@ -20,19 +21,20 @@ export default function Home() {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="https://videos.pexels.com/video-files/5532776/5532776-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+            <source src="https://cdn.pixabay.com/video/2020/02/24/32890-394474811_large.mp4" type="video/mp4" />
           </video>
 
-          <div className="absolute inset-0 bg-[#0A192F]/70 z-10"></div>
+          {/* 深色遮罩 */}
+          <div className="absolute inset-0 bg-[#0A192F]/80 z-10"></div>
 
+          {/* 内容 - 绝对居中 */}
           <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
             <div className="max-w-5xl text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-300 text-sm font-medium mb-8 backdrop-blur-sm animate-fade-in">
-                <Globe2 className="w-4 h-4" /> Emerging Markets Specialists
-              </div>
+              {/* 删除了小标签 "Emerging Markets Specialists" */}
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-tight mb-8 animate-fade-in-up">
-                赋能中国企业出海<br />
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.3] mb-8 animate-fade-in-up">
+                赋能中国企业出海<br className="md:hidden" />
+                <span className="md:block md:mt-4"></span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
                   深潜新兴市场
                 </span>
@@ -61,6 +63,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 滚动提示 */}
           <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-white/60 rounded-full mt-2"></div>
@@ -68,26 +71,32 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 2：立足中国的中央项目管控 */}
-        <section id="pm" className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
+        {/* 区块 2：立足中国的中央项目管控 - 删除小标签，增加背景图 */}
+        <section id="pm" className="relative py-24 bg-cover bg-center bg-fixed overflow-hidden">
+          {/* 背景图 + 深色遮罩 */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop')" }}
+          ></div>
+          <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
+          
+          {/* 内容 */}
+          <div className="relative z-20 max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium mb-6">
-                <Building2 className="w-4 h-4" /> China-Based Centralized PM
-              </div>
+              {/* 删除了 "China-Based Centralized PM" 小标签 */}
               
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
                 您的专属跨国项目枢纽
               </h2>
               
-              <p className="text-xl text-slate-600 leading-relaxed">
+              <p className="text-xl text-slate-300 leading-relaxed">
                 告别跨国时差与语言障碍。您的专属对接团队立足中国，无缝沟通业务需求；同时我们通过严格的标准化 SOP 与 AI 辅助系统，精准指挥拉美、亚太及中东非的本土执行网络。您只需对接我们，我们将世界带给您。
               </p>
             </div>
           </div>
         </section>
 
-        {/* 区块 3：核心服务矩阵 - 4 格 Card 布局 */}
+        {/* 区块 3：核心服务矩阵 - 图标和文字居中对齐 */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
@@ -96,54 +105,62 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* 卡片 1：精准招募 */}
+              {/* 卡片 1：精准招募 - 居中对齐 */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Target className="w-7 h-7 text-blue-600" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                    <Target className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">精准招募</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    结合本土资源网络与定制化寻访策略，精准触达目标人群。
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">精准招募</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  结合本土资源网络与定制化寻访策略，精准触达目标人群。
-                </p>
               </div>
 
-              {/* 卡片 2：本地主持 */}
+              {/* 卡片 2：本地主持 - 居中对齐 */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Mic className="w-7 h-7 text-blue-600" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                    <Mic className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">本地主持</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    派遣深谙本地文化与商业语境的资深主持人，挖掘深层洞察。
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">本地主持</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  派遣深谙本地文化与商业语境的资深主持人，挖掘深层洞察。
-                </p>
               </div>
 
-              {/* 卡片 3：同传与转录 */}
+              {/* 卡片 3：同传与转录 - 居中对齐 */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Headphones className="w-7 h-7 text-blue-600" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                    <Headphones className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">同传与转录</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    提供实时多语种同声传译与高质量的本土语言转录记录。
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">同传与转录</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  提供实时多语种同声传译与高质量的本土语言转录记录。
-                </p>
               </div>
 
-              {/* 卡片 4：场地与设施 */}
+              {/* 卡片 4：场地与设施 - 居中对齐 */}
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                  <Video className="w-7 h-7 text-blue-600" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
+                    <Video className="w-7 h-7 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">场地与设施</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    协调符合国际标准的单透镜会议室或高稳定性的线上访谈平台。
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">场地与设施</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  协调符合国际标准的单透镜会议室或高稳定性的线上访谈平台。
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 区块 4：受众触达能力 */}
+        {/* 区块 4：受众触达能力 - 调整顺序，核心消费者移到最左 */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto">
@@ -156,6 +173,17 @@ export default function Home() {
               </p>
 
               <div className="grid md:grid-cols-3 gap-6">
+                {/* 核心消费者群体 - 移到最左 */}
+                <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 border border-amber-200">
+                  <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">核心消费者群体</h3>
+                  <p className="text-slate-600 text-sm">
+                    下沉市场受众、Z 世代、特定应用重度用户
+                  </p>
+                </div>
+
                 {/* B2B 决策者与高管 */}
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
@@ -175,17 +203,6 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-slate-900 mb-2">医疗健康专业人士</h3>
                   <p className="text-slate-600 text-sm">
                     KOL、专科医生及特定病患群体
-                  </p>
-                </div>
-
-                {/* 核心消费者群体 */}
-                <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 border border-amber-200">
-                  <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">核心消费者群体</h3>
-                  <p className="text-slate-600 text-sm">
-                    下沉市场受众、Z 世代、特定应用重度用户
                   </p>
                 </div>
               </div>
@@ -217,16 +234,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 6：三重防欺诈质控体系 - 核心护城河 */}
+        {/* 区块 6：三重风控与质控体系 - 删除小标签，修改标题 */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-sm font-medium mb-6">
-                  <ShieldCheck className="w-4 h-4" /> Triple Anti-Fraud SOP
-                </div>
+                {/* 删除了 "Triple Anti-Fraud SOP" 小标签 */}
                 <h2 className="text-4xl font-extrabold text-slate-900 mb-6">
-                  机器般的纪律：三重防欺诈质控体系
+                  机器般的纪律：三重风控与质控体系
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   在复杂的海外新兴市场，数据真实性是定性研究的生命线。我们摒弃盲目信任，采用极致严密的标准化风控流程管理全球供应商：
