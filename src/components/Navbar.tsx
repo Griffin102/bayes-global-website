@@ -51,12 +51,12 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <a
-            href="#client-form"
+          <Link
+            href="/suppliers"
             className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
           >
-            提交需求
-          </a>
+            Become a Partner
+          </Link>
         </div>
       </div>
     </nav>
