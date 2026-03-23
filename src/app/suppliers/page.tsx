@@ -1,11 +1,11 @@
-import { Globe2, DollarSign, FileText, TrendingUp, UserCheck, ShieldCheck, CheckCircle, Building2 } from "lucide-react";
+import { Globe2, DollarSign, FileText, TrendingUp, CheckCircle, Building2, UserCheck } from "lucide-react";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export default function SuppliersPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* 供应商端导航栏 */}
+      {/* 供应商端导航栏 - 深色，唯一 Header */}
       <nav className="bg-[#0A192F] text-white sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between h-20">
@@ -16,7 +16,7 @@ export default function SuppliersPage() {
 
             <div className="hidden md:flex items-center gap-8">
               <a href="#why-partner" className="text-white/90 hover:text-white font-medium transition">
-                Why Partner
+                Why Partner With Us
               </a>
               <a href="#founder" className="text-white/90 hover:text-white font-medium transition">
                 About
@@ -33,33 +33,36 @@ export default function SuppliersPage() {
               href="/"
               className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
             >
-              Client Portal
+              Client Portal (中文官网)
             </Link>
           </div>
         </div>
       </nav>
 
       <main className="flex-grow">
-        {/* 区块 1：Hero 首屏 */}
-        <section className="relative py-24 bg-gradient-to-br from-[#0A192F] to-blue-900 text-white overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute inset-0" style={{
-              backgroundImage: "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
-              backgroundSize: "40px 40px"
-            }}></div>
-          </div>
+        {/* 区块 1：Hero 首屏 - 深色全球商业背景图 */}
+        <section className="relative py-24 text-white overflow-hidden">
+          {/* 背景图 */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop')" }}
+          ></div>
+          {/* 深色遮罩 */}
+          <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
           
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
+          {/* 内容 */}
+          <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              Become a Local Partner with Bayes Global
+              Powering Global Fieldwork,<br className="hidden md:block" />
+              Connecting You to China&apos;s Going-Global Wave
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Join our elite network of fieldwork agencies and independent consultants across LATAM, APAC, and MENA.
+              Join our trusted network to execute high-quality qualitative research for China&apos;s top enterprises.
             </p>
           </div>
         </section>
 
-        {/* 区块 2：Why Partner With Us? - 3 格布局 */}
+        {/* 区块 2：Why Partner With Us - 3 格布局，居中对齐 */}
         <section id="why-partner" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
@@ -68,117 +71,120 @@ export default function SuppliersPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* 卡片 1：Guaranteed & Prompt Payments */}
+              {/* 卡片 1：Guaranteed & Prompt Payments - 居中对齐 */}
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-all">
-                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <DollarSign className="w-8 h-8 text-white" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <DollarSign className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Guaranteed & Prompt Payments</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We value your hard work. Enjoy transparent payment schedules with absolutely zero delayed settlements.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Guaranteed & Prompt Payments</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  We value your hard work. Enjoy transparent payment schedules with absolutely zero delayed settlements.
-                </p>
               </div>
 
-              {/* 卡片 2：Crystal Clear Briefs */}
+              {/* 卡片 2：Crystal Clear Briefs - 居中对齐 */}
               <div className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-8 border border-emerald-100 hover:shadow-lg transition-all">
-                <div className="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center mb-6">
-                  <FileText className="w-8 h-8 text-white" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                    <FileText className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Crystal Clear Briefs</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Say goodbye to endless revisions. We provide standardized, unambiguous project briefs backed by rigorous SOPs.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Crystal Clear Briefs</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Say goodbye to endless revisions. We provide standardized, unambiguous project briefs backed by rigorous SOPs.
-                </p>
               </div>
 
-              {/* 卡片 3：Consistent Project Flow */}
+              {/* 卡片 3：Consistent Project Flow - 居中对齐 */}
               <div className="bg-gradient-to-br from-amber-50 to-white rounded-3xl p-8 border border-amber-100 hover:shadow-lg transition-all">
-                <div className="w-16 h-16 bg-amber-600 rounded-2xl flex items-center justify-center mb-6">
-                  <TrendingUp className="w-8 h-8 text-white" />
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 bg-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4">Consistent Project Flow</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Gain access to a steady stream of qualitative research projects from top-tier Chinese global enterprises.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Consistent Project Flow</h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Gain access to a steady stream of qualitative research projects from top-tier Chinese global enterprises.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 区块 3：创始人与技术基建 - 图文左右排版 */}
+        {/* 区块 3：创始人背书 - 专业图文左右排版 */}
         <section id="founder" className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* 图片占位符 */}
-              <div className="relative">
-                <div className="aspect-[4/5] bg-gray-300 rounded-3xl overflow-hidden flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto bg-gray-400 rounded-full mb-6 flex items-center justify-center">
-                      <UserCheck className="w-16 h-16 text-gray-500" />
-                    </div>
-                    <p className="text-gray-600 text-sm">
-                      Founder Photo Placeholder<br />
-                      (A稳重可靠的商务男士，四十多岁)
-                    </p>
+              {/* 左侧：创始人照片 */}
+              <div className="flex justify-center md:justify-end">
+                <div className="relative">
+                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                    <img
+                      src="/founder-photo.png"
+                      alt="Griffin Wang, Founder of Bayes Global"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* 文字内容 */}
+              {/* 右侧：文案 */}
               <div>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
-                  Driven by Technology, Anchored in Trust
+                  A Partner with Deep Expertise
                 </h2>
-                <p className="text-lg text-slate-600 leading-relaxed">
-                  Bayes Global is founded by data and technology veterans from China. We leverage cutting-edge AI tools like DeepSeek and highly structured SOPs to manage cross-border collaboration. We don&apos;t just pass messages; we streamline workflows, eliminate communication friction, and build long-term, mutually beneficial partnerships with top local executors.
-                </p>
+                <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
+                  <p>
+                    Hello, I&apos;m Griffin Wang. After 15 years on the front lines of market research in China, I witnessed an incredible trend: today, over 500,000 Chinese enterprises are engaged in foreign trade, all striving to take their brands global.
+                  </p>
+                  <p>
+                    I founded Bayes Global to be the strategic solution—a trustworthy bridge built on my experience and backed by the financial integrity of our Hong Kong operating entity. We enable exceptional agencies like yours to securely seize this historic opportunity. I am not just a middleman; I am your project partner and quality guarantor, ensuring a steady flow of high-quality projects and guaranteed payments.
+                  </p>
+                  <p className="font-medium text-slate-900 italic">
+                    — Griffin Wang, Founder of Bayes Global
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 区块 4：What We Look For */}
+        {/* 区块 4：准入要求 - 两条入驻通道 */}
         <section id="requirements" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">What We Look For in a Partner</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Two Partnership Tracks</h2>
 
               <div className="space-y-8">
-                {/* 列表 1：Local Fieldwork Agencies */}
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Building2 className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">Local Fieldwork Agencies</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Must have a verifiable physical office address and localized operational capability.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 列表 2：Independent Consultants */}
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <UserCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">Independent Consultants (Moderators/Translators)</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      Must provide a verifiable LinkedIn profile and relevant industry credentials.
-                    </p>
+                {/* Track 1: Local Fieldwork Agencies */}
+                <div className="bg-gradient-to-r from-blue-50 to-white rounded-3xl p-8 border border-blue-100 hover:shadow-lg transition-all">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <Building2 className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-3">Track 1: Local Fieldwork Agencies</h3>
+                      <p className="text-slate-600 leading-relaxed text-lg">
+                        For established agencies with verifiable physical offices and full-suite qualitative capabilities.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                {/* 列表 3：Shared Commitment */}
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <ShieldCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-3">Shared Commitment</h3>
-                    <p className="text-slate-600 leading-relaxed">
-                      All partners must be willing to undergo our Rigorous Quality Pilot and adhere to our daily check-in protocols to ensure the highest standards.
-                    </p>
+                {/* Track 2: Independent Expert Network */}
+                <div className="bg-gradient-to-r from-emerald-50 to-white rounded-3xl p-8 border border-emerald-100 hover:shadow-lg transition-all">
+                  <div className="flex items-start gap-6">
+                    <div className="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <UserCheck className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900 mb-3">Track 2: Independent Expert Network</h3>
+                      <p className="text-slate-600 leading-relaxed text-lg">
+                        For seasoned freelance moderators and native translators with verifiable LinkedIn credentials.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -266,9 +272,9 @@ export default function SuppliersPage() {
                   required
                   className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition"
                 >
-                  <option value="">Select your type</option>
-                  <option value="agency">Local Fieldwork Agency</option>
-                  <option value="consultant">Independent Consultant (Moderator/Translator)</option>
+                  <option value="">Select your track</option>
+                  <option value="agency">Track 1: Local Fieldwork Agency</option>
+                  <option value="consultant">Track 2: Independent Expert (Moderator/Translator)</option>
                   <option value="other">Other</option>
                 </select>
               </div>

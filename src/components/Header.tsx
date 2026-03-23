@@ -5,7 +5,12 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const pathname = usePathname();
-  const isSupplierPage = pathname === '/suppliers';
+  
+  // 不在 /suppliers 页面渲染（该页面有自己的内联导航栏）
+  // 也不在 /supplier/* 路径渲染（旧的供应商路由）
+  if (pathname === '/suppliers' || pathname.startsWith('/supplier')) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -18,11 +23,6 @@ export default function Header() {
 
           {/* Right: Navigation + CTA */}
           <div className="flex items-center gap-6">
-            {isSupplierPage && (
-              <Link href="/" className="text-sm text-slate-600 hover:text-blue-600 transition">
-                中文版 / For Clients
-              </Link>
-            )}
             <Link
               href="/suppliers"
               className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition-all shadow-md hover:shadow-lg"

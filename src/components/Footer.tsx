@@ -26,10 +26,10 @@ export default function Footer() {
             
             {/* 邮箱 */}
             <a
-              href="mailto:Griffin@bayesglobal.com"
+              href="mailto:griffin@bayesglobal.com"
               className="text-slate-400 hover:text-white transition text-sm"
             >
-              Griffin@bayesglobal.com
+              griffin@bayesglobal.com
             </a>
           </div>
           
