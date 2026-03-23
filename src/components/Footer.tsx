@@ -11,9 +11,11 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center gap-6">
-            {/* LinkedIn 占位符 */}
+            {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/griffin-wang"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-slate-400 hover:text-white transition"
               aria-label="LinkedIn"
             >
@@ -24,10 +26,10 @@ export default function Footer() {
             
             {/* 邮箱 */}
             <a
-              href="mailto:hello@bayesglobal.com"
+              href="mailto:Griffin@bayesglobal.com"
               className="text-slate-400 hover:text-white transition text-sm"
             >
-              hello@bayesglobal.com
+              Griffin@bayesglobal.com
             </a>
           </div>
           

@@ -1,5 +1,5 @@
 import { insightsData } from "@/data/insights";
-import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, User } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -69,6 +69,42 @@ export default async function InsightArticlePage({ params }: PageProps) {
         );
       }
       
+      // Handle table rows (simple markdown table support)
+      if (paragraph.includes("|") && paragraph.trim().startsWith("|")) {
+        const rows = paragraph.split("\n").filter((line) => line.trim().startsWith("|"));
+        // Skip separator row (|---|---|)
+        const dataRows = rows.filter((row) => !row.includes("|---"));
+        
+        if (dataRows.length > 0) {
+          return (
+            <div key={idx} className="overflow-x-auto my-6">
+              <table className="min-w-full border border-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    {dataRows[0].split("|").filter((cell) => cell.trim()).map((cell, i) => (
+                      <th key={i} className="px-4 py-3 text-left text-sm font-semibold text-slate-900 border-b border-gray-200">
+                        {cell.trim()}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {dataRows.slice(1).map((row, rowIndex) => (
+                    <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      {row.split("|").filter((cell) => cell.trim()).map((cell, cellIndex) => (
+                        <td key={cellIndex} className="px-4 py-3 text-sm text-slate-700 border-b border-gray-100">
+                          {cell.trim()}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+      }
+      
       // Handle bold text in paragraphs
       const parts = paragraph.split(/(\*\*.*?\*\*)/g);
       return (
@@ -85,85 +121,67 @@ export default async function InsightArticlePage({ params }: PageProps) {
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Back Button */}
+    <div className="min-h-screen flex flex-col">
+      {/* Back Button - 汉化 */}
       <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 py-4">
           <Link
-            href="/#insights"
+            href="/insights"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-blue-600 transition"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Insights
+            返回洞察列表
           </Link>
         </div>
       </div>
 
-      {/* Hero with Cover Image - 减少 padding-top */}
-      <section className="relative">
-        <div className="absolute inset-0 h-[400px] bg-gradient-to-b from-slate-900/80 to-slate-900/40 z-10"></div>
-        <div
-          className="absolute inset-0 h-[400px] bg-cover bg-center"
-          style={{ backgroundImage: `url(${article.coverImage})` }}
-        ></div>
-        <div className="relative z-20 max-w-4xl mx-auto px-6 pt-24 pb-12">
-          <div className="flex flex-wrap gap-3 mb-6">
-            {article.tags.map((tag, idx) => (
-              <span
-                key={idx}
-                className="px-3 py-1 bg-blue-600/90 text-white text-sm rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-            {article.title}
-          </h1>
-          <p className="text-xl text-slate-300 mb-8">{article.titleEn}</p>
-          <div className="flex items-center gap-6 text-slate-300">
-            <div className="flex items-center gap-2">
-              <User className="w-5 h-5" />
-              <span className="text-sm">{article.author}</span>
+      <main className="flex-grow">
+        {/* Hero with Cover Image */}
+        <section className="relative">
+          <div className="absolute inset-0 h-[400px] bg-gradient-to-b from-slate-900/80 to-slate-900/40 z-10"></div>
+          <div
+            className="absolute inset-0 h-[400px] bg-cover bg-center"
+            style={{ backgroundImage: `url(${article.coverImage})` }}
+          ></div>
+          <div className="relative z-20 max-w-4xl mx-auto px-6 pt-24 pb-12">
+            <div className="flex flex-wrap gap-3 mb-6">
+              {article.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 bg-blue-600/90 text-white text-sm rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
-              <span className="text-sm">{article.publishDate}</span>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+              {article.title}
+            </h1>
+            <div className="flex items-center gap-6 text-slate-300">
+              <div className="flex items-center gap-2">
+                <User className="w-5 h-5" />
+                <span className="text-sm">{article.author}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                <span className="text-sm">{article.publishDate}</span>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Article Content */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Excerpt - 仅显示一次，不重复 */}
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl mb-12">
-            <p className="text-lg text-slate-800 font-medium mb-2">
-              {article.excerpt}
-            </p>
-            <p className="text-slate-600 text-sm">{article.excerptEn}</p>
+        {/* Article Content */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-6">
+            {/* Main Content - Chinese Only, 删除英文段落 */}
+            <div className="prose prose-lg max-w-none space-y-6">
+              {parseContent(article.content)}
+            </div>
           </div>
+        </section>
+      </main>
 
-          {/* Main Content - Chinese */}
-          <div className="prose prose-lg max-w-none">
-            {parseContent(article.content)}
-          </div>
-
-          {/* Divider */}
-          <hr className="my-12 border-gray-200" />
-
-          {/* English Version */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              English Version
-            </h2>
-            {parseContent(article.contentEn)}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
+      {/* 全局 Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p>© {new Date().getFullYear()} Bayes Global. All rights reserved.</p>

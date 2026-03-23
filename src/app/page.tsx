@@ -19,7 +19,9 @@ export default function Home() {
             loop
             muted
             playsInline
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
+            poster="https://cdn.pixabay.com/photo/2020/02/24/32890-394474811_960_720.jpg"
           >
             <source src="https://cdn.pixabay.com/video/2020/02/24/32890-394474811_large.mp4" type="video/mp4" />
           </video>
@@ -173,37 +175,43 @@ export default function Home() {
               </p>
 
               <div className="grid md:grid-cols-3 gap-6">
-                {/* 核心消费者群体 - 移到最左 */}
+                {/* 核心消费者群体 - 移到最左，居中对齐 */}
                 <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 border border-amber-200">
-                  <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-white" />
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-4">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2">核心消费者群体</h3>
+                    <p className="text-slate-600 text-sm">
+                      下沉市场受众、Z 世代、特定应用重度用户
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">核心消费者群体</h3>
-                  <p className="text-slate-600 text-sm">
-                    下沉市场受众、Z 世代、特定应用重度用户
-                  </p>
                 </div>
 
-                {/* B2B 决策者与高管 */}
+                {/* B2B 决策者与高管 - 居中对齐 */}
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
-                    <Building2 className="w-6 h-6 text-white" />
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2">B2B 决策者与高管</h3>
+                    <p className="text-slate-600 text-sm">
+                      企业 IT、金融、制造业决策链核心人物
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">B2B 决策者与高管</h3>
-                  <p className="text-slate-600 text-sm">
-                    企业 IT、金融、制造业决策链核心人物
-                  </p>
                 </div>
 
-                {/* 医疗健康专业人士 */}
+                {/* 医疗健康专业人士 - 居中对齐 */}
                 <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 border border-emerald-200">
-                  <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
-                    <UserCheck className="w-6 h-6 text-white" />
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-4">
+                      <UserCheck className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900 mb-2">医疗健康专业人士</h3>
+                    <p className="text-slate-600 text-sm">
+                      KOL、专科医生及特定病患群体
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">医疗健康专业人士</h3>
-                  <p className="text-slate-600 text-sm">
-                    KOL、专科医生及特定病患群体
-                  </p>
                 </div>
               </div>
             </div>
