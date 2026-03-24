@@ -324,7 +324,7 @@ export default function Home() {
           {/* 背景图：深色世界地图风格 */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589561253814-f06ddba3a2fc?q=80&w=2670&auto=format&fit=crop')" }}
+            style={{ backgroundImage: "url('/map-bg.jpg')" }}
           ></div>
           {/* 深色遮罩 */}
           <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>

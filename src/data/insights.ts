@@ -236,7 +236,7 @@ This mechanism has been proven effective in:
 - Mexico (Mexico City, Guadalajara, Monterrey)
 - Argentina (Buenos Aires)
 - Colombia (Bogotá, Medellín)`,
-    coverImage: "https://images.unsplash.com/photo-1518638150340-f706b8641b56?q=80&w=2670&auto=format&fit=crop",
+    coverImage: "/latam-cover.jpg",
     author: "Bayes Global",
     publishDate: "2026-03-22",
     tags: ["风控策略", "拉美市场"],
@@ -514,7 +514,7 @@ This mechanism has been deployed in:
 - Indonesia (Jakarta, Surabaya, Bandung, and rural regencies)
 - Thailand (Bangkok and surrounding provinces)
 - Vietnam (Ho Chi Minh City, Hanoi)`,
-    coverImage: "https://images.unsplash.com/photo-1555921015-5532091f6026?q=80&w=2670&auto=format&fit=crop",
+    coverImage: "/indonesia-cover.jpg",
     author: "Bayes Global",
     publishDate: "2026-03-22",
     tags: ["质量保证", "亚太市场"],
@@ -927,7 +927,7 @@ We have assisted clients in reaching:
 2. **Budget appropriately**: High-value demographics have significantly higher incentive costs
 3. **Flexible formats**: Offer multiple participation modes (online/offline/phone)
 4. **Local partners**: Must rely on trustworthy local networks`,
-    coverImage: "https://images.unsplash.com/photo-1512632578888-169bbbc64f33?q=80&w=2670&auto=format&fit=crop",
+    coverImage: "/mena-cover.jpg",
     author: "Bayes Global",
     publishDate: "2026-03-22",
     tags: ["B2B 招募", "中东非市场"],
