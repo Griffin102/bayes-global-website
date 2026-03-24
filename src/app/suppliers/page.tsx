@@ -113,12 +113,12 @@ export default function SuppliersPage() {
           </div>
         </section>
 
-        {/* 区块 3：创始人背书 - 专业图文左右排版 */}
+        {/* 区块 3：创始人背书 - 专业图文左右排版，居中对齐 */}
         <section id="founder" className="py-24 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* 左侧：创始人照片 */}
-              <div className="flex justify-center md:justify-end">
+              <div className="flex justify-center">
                 <div className="relative">
                   <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white">
                     <img
@@ -146,6 +146,127 @@ export default function SuppliersPage() {
                     — Griffin Wang, Founder of Bayes Global
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 区块 4：高效的合作旅程 - 4 步骤流程 */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">How We Collaborate</h2>
+              <p className="text-slate-600">A streamlined partnership journey designed for efficiency and clarity.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Step 1 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-white font-bold text-lg">1</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Clear Project Briefing</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We provide unambiguous recruitment quotas and execution standards, eliminating confusion from the start.
+                  </p>
+                </div>
+                {/* 连接线 */}
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-blue-200"></div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-emerald-50 to-white rounded-2xl p-8 border border-emerald-100 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-white font-bold text-lg">2</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Streamlined Recruitment</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    You handle local outreach; we provide AI-assisted screening tools for efficient candidate validation.
+                  </p>
+                </div>
+                {/* 连接线 */}
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-emerald-200"></div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-amber-50 to-white rounded-2xl p-8 border border-amber-100 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-white font-bold text-lg">3</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Smooth Execution</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Full support throughout the project with minimal micromanagement—trust your expertise.
+                  </p>
+                </div>
+                {/* 连接线 */}
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-amber-200"></div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <span className="text-white font-bold text-lg">4</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Lightning-Fast Payment</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Immediate payment upon delivery acceptance—no delays, no excuses.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 区块 5：我们的绝对承诺 */}
+        <section className="py-24 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Commitment</h2>
+              <p className="text-slate-600">The principles that guide every partnership.</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* 承诺 1 */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Respect for Local Expertise</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  We value your on-the-ground knowledge and never undermine your professional judgment.
+                </p>
+              </div>
+
+              {/* 承诺 2 */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div className="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Data Privacy Compliance</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Strict adherence to local privacy laws and international data protection standards.
+                </p>
+              </div>
+
+              {/* 承诺 3 */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                <div className="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Long-term Partnership</h3>
+                <p className="text-slate-600 leading-relaxed">
+                  We build lasting ecosystems, not one-off transactions. Your growth is our growth.
+                </p>
               </div>
             </div>
           </div>

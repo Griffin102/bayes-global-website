@@ -217,32 +217,46 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 5：调研方法 */}
+        {/* 区块 5：调研方法 - 添加商务图片 */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-slate-900 mb-8">全场景定性调研支持</h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* 左侧：调研方法标签 */}
+              <div>
+                <h2 className="text-3xl font-bold text-slate-900 mb-8">全场景定性调研支持</h2>
+                
+                <div className="flex flex-wrap gap-4">
+                  <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
+                    焦点小组座谈会 (FGD)
+                  </span>
+                  <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
+                    深度访谈 (IDI)
+                  </span>
+                  <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
+                    人类学伴随访问 (Ethnography)
+                  </span>
+                  <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
+                    在线社区 (Online Communities)
+                  </span>
+                </div>
+              </div>
               
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
-                  焦点小组座谈会 (FGD)
-                </span>
-                <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
-                  深度访谈 (IDI)
-                </span>
-                <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
-                  人类学伴随访问 (Ethnography)
-                </span>
-                <span className="px-6 py-3 bg-white rounded-full border border-gray-200 text-slate-700 font-medium shadow-sm">
-                  在线社区 (Online Communities)
-                </span>
+              {/* 右侧：商务调研图片 */}
+              <div className="relative">
+                <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop"
+                    alt="商务调研场景"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* 区块 6：三重风控与质控体系 - 删除小标签，修改标题 */}
-        <section className="py-24 bg-white">
+        <section id="qc" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -302,6 +316,27 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* 区块 7：全球执行网络 - 恢复被删除的区块 */}
+        <section id="network" className="relative py-24 text-white overflow-hidden">
+          {/* 背景图：深色世界地图风格 */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589561253814-f06ddba3a2fc?q=80&w=2670&auto=format&fit=crop')" }}
+          ></div>
+          {/* 深色遮罩 */}
+          <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
+          
+          {/* 内容 */}
+          <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
+              跨越时区的全球触达
+            </h2>
+            <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
+              核心覆盖：<span className="text-blue-400 font-semibold">拉丁美洲 (LATAM)</span> | <span className="text-emerald-400 font-semibold">亚太地区 (APAC)</span> | <span className="text-amber-400 font-semibold">中东与非洲 (MENA)</span>
+            </p>
           </div>
         </section>
 

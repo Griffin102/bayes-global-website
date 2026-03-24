@@ -19,35 +19,35 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          ? "bg-white/90 backdrop-blur-md shadow-lg border-b border-gray-200"
+          : "bg-white/90 backdrop-blur-md border-b border-gray-200"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo - 点击返回首页 */}
           <Link href="/" className="flex items-center gap-3">
-            <Globe2 className={`w-8 h-8 transition ${isScrolled ? "text-slate-900" : "text-white"}`} />
-            <span className={`text-xl font-bold transition ${isScrolled ? "text-slate-900" : "text-white"}`}>
+            <Globe2 className="w-8 h-8 text-slate-900" />
+            <span className="text-xl font-bold text-slate-900">
               Bayes Global
             </span>
           </Link>
 
           {/* Navigation Links - 修复锚点 */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className={`font-medium transition ${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/90 hover:text-white"}`}>
+            <a href="#" className="font-medium text-slate-700 hover:text-slate-900 transition">
               首页
             </a>
-            <a href="#pm" className={`font-medium transition ${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/90 hover:text-white"}`}>
+            <a href="#pm" className="font-medium text-slate-700 hover:text-slate-900 transition">
               核心方案
             </a>
-            <a href="#qa" className={`font-medium transition ${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/90 hover:text-white"}`}>
+            <a href="#qc" className="font-medium text-slate-700 hover:text-slate-900 transition">
               质控与合规
             </a>
-            <a href="#network" className={`font-medium transition ${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/90 hover:text-white"}`}>
+            <a href="#network" className="font-medium text-slate-700 hover:text-slate-900 transition">
               全球网络
             </a>
-            <a href="#insights" className={`font-medium transition ${isScrolled ? "text-slate-700 hover:text-slate-900" : "text-white/90 hover:text-white"}`}>
+            <a href="#insights" className="font-medium text-slate-700 hover:text-slate-900 transition">
               市场洞察
             </a>
           </div>

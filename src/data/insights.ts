@@ -514,7 +514,7 @@ This mechanism has been deployed in:
 - Indonesia (Jakarta, Surabaya, Bandung, and rural regencies)
 - Thailand (Bangkok and surrounding provinces)
 - Vietnam (Ho Chi Minh City, Hanoi)`,
-    coverImage: "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?q=80&w=2670&auto=format&fit=crop",
+    coverImage: "https://images.unsplash.com/photo-1555921015-5532091f6026?q=80&w=2670&auto=format&fit=crop",
     author: "Bayes Global",
     publishDate: "2026-03-22",
     tags: ["质量保证", "亚太市场"],
