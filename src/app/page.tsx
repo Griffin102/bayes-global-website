@@ -21,9 +21,8 @@ export default function Home() {
             playsInline
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
-            poster="https://cdn.pixabay.com/photo/2020/02/24/32890-394474811_960_720.jpg"
           >
-            <source src="https://cdn.pixabay.com/video/2020/02/24/32890-394474811_large.mp4" type="video/mp4" />
+            <source src="/hero-bg.mp4" type="video/mp4" />
           </video>
 
           {/* 深色遮罩 */}
