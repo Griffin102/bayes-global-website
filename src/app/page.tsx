@@ -104,11 +104,6 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-white mb-4">覆盖全链路的实地执行服务</h2>
               <p className="text-slate-300">从招募到交付，一站式完成。</p>
             </div>
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">覆盖全链路的实地执行服务</h2>
-              <p className="text-slate-600">从招募到交付，一站式完成。</p>
-            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* 卡片 1：精准招募 - 居中对齐 */}
