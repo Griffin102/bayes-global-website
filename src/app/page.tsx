@@ -320,17 +320,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 7：全球执行网络 - 本地地图图片 */}
+        {/* 区块 7：全球执行网络 - 恢复被删除的区块 */}
         <section id="network" className="relative py-24 text-white overflow-hidden">
-          {/* 背景图：本地地图图片 */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/global-map.png"
-              alt="全球执行网络地图"
-              fill
-              className="object-cover"
-            />
-          </div>
+          {/* 背景图：深色世界地图风格 */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/map-bg.jpg')" }}
+          ></div>
           {/* 深色遮罩 */}
           <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
           
