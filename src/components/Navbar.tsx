@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Globe2 } from "lucide-react";
+import { Globe } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -25,10 +25,10 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo - 点击返回首页 */}
-          <Link href="/" className="flex items-center gap-3">
-            <Globe2 className="w-8 h-8 text-slate-900" />
-            <span className="text-xl font-bold text-slate-900">
+          {/* Logo - 纯代码矢量 Logo，适配白底 */}
+          <Link href="/" className="flex items-center gap-2">
+            <Globe className="w-7 h-7 text-blue-600" />
+            <span className="text-xl font-bold text-slate-900 tracking-tight">
               Bayes Global
             </span>
           </Link>

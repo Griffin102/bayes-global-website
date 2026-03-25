@@ -1,6 +1,7 @@
-import { ShieldCheck, Users, Globe2, Zap, CheckCircle, Brain, Lock, ArrowRight, Target, FileCheck, UserCheck, Mic, Headphones, Video, Building2 } from "lucide-react";
+import { ShieldCheck, Users, Globe, Zap, CheckCircle, Brain, Lock, ArrowRight, Target, FileCheck, UserCheck, Mic, Headphones, Video, Building2 } from "lucide-react";
 import { insightsData } from "@/data/insights";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -72,8 +73,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 2：立足中国的中央项目管控 - 删除小标签，增加背景图 */}
-        <section id="pm" className="relative py-24 bg-cover bg-center bg-fixed overflow-hidden">
+        {/* 区块 2：专属跨国项目枢纽 - 纯白背景 */}
+        <section id="pm" className="py-24 bg-white">
+          {/* 内容 */}
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-8">
+                您的专属跨国项目枢纽
+              </h2>
+              
+              <p className="text-xl text-slate-600 leading-relaxed">
+                告别跨国时差与语言障碍。您的专属对接团队立足中国，无缝沟通业务需求；同时我们通过严格的标准化 SOP 与 AI 辅助系统，精准指挥拉美、亚太及中东非的本土执行网络。您只需对接我们，我们将世界带给您。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 区块 3：覆盖全链路的实地执行服务 - 深色商务背景图 + 遮罩 */}
+        <section className="relative py-24 overflow-hidden">
           {/* 背景图 + 深色遮罩 */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
@@ -83,22 +100,10 @@ export default function Home() {
           
           {/* 内容 */}
           <div className="relative z-20 max-w-7xl mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* 删除了 "China-Based Centralized PM" 小标签 */}
-              
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8">
-                您的专属跨国项目枢纽
-              </h2>
-              
-              <p className="text-xl text-slate-300 leading-relaxed">
-                告别跨国时差与语言障碍。您的专属对接团队立足中国，无缝沟通业务需求；同时我们通过严格的标准化 SOP 与 AI 辅助系统，精准指挥拉美、亚太及中东非的本土执行网络。您只需对接我们，我们将世界带给您。
-              </p>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl font-bold text-white mb-4">覆盖全链路的实地执行服务</h2>
+              <p className="text-slate-300">从招募到交付，一站式完成。</p>
             </div>
-          </div>
-        </section>
-
-        {/* 区块 3：核心服务矩阵 - 图标和文字居中对齐 */}
-        <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">覆盖全链路的实地执行服务</h2>
@@ -107,52 +112,52 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* 卡片 1：精准招募 - 居中对齐 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                    <Target className="w-7 h-7 text-blue-600" />
+                  <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Target className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">精准招募</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">精准招募</h3>
+                  <p className="text-slate-300 leading-relaxed">
                     结合本土资源网络与定制化寻访策略，精准触达目标人群。
                   </p>
                 </div>
               </div>
 
               {/* 卡片 2：本地主持 - 居中对齐 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                    <Mic className="w-7 h-7 text-blue-600" />
+                  <div className="w-14 h-14 bg-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Mic className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">本地主持</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">本地主持</h3>
+                  <p className="text-slate-300 leading-relaxed">
                     派遣深谙本地文化与商业语境的资深主持人，挖掘深层洞察。
                   </p>
                 </div>
               </div>
 
               {/* 卡片 3：同传与转录 - 居中对齐 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                    <Headphones className="w-7 h-7 text-blue-600" />
+                  <div className="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Headphones className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">同传与转录</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">同传与转录</h3>
+                  <p className="text-slate-300 leading-relaxed">
                     提供实时多语种同声传译与高质量的本土语言转录记录。
                   </p>
                 </div>
               </div>
 
               {/* 卡片 4：场地与设施 - 居中对齐 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                    <Video className="w-7 h-7 text-blue-600" />
+                  <div className="w-14 h-14 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                    <Video className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">场地与设施</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl font-bold text-white mb-3">场地与设施</h3>
+                  <p className="text-slate-300 leading-relaxed">
                     协调符合国际标准的单透镜会议室或高稳定性的线上访谈平台。
                   </p>
                 </div>
@@ -241,13 +246,14 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* 右侧：商务调研图片 */}
+              {/* 右侧：商务调研图片 - Next.js Image 组件 */}
               <div className="relative">
                 <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop"
                     alt="商务调研场景"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -335,12 +341,12 @@ export default function Home() {
               跨越时区的全球触达
             </h2>
             <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-4xl mx-auto">
-              核心覆盖：<span className="text-blue-400 font-semibold">拉丁美洲 (LATAM)</span> | <span className="text-emerald-400 font-semibold">亚太地区 (APAC)</span> | <span className="text-amber-400 font-semibold">中东与非洲 (MENA)</span>
+              核心覆盖：<span className="text-emerald-400 font-semibold">亚太地区 (APAC)</span> | <span className="text-amber-400 font-semibold">中东与非洲 (MENA)</span> | <span className="text-blue-400 font-semibold">拉丁美洲 (LATAM)</span>
             </p>
           </div>
         </section>
 
-        {/* 市场洞察 */}
+        {/* 市场洞察 - 排序：APAC -> MENA -> LATAM */}
         <section id="insights" className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -358,17 +364,25 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {insightsData.slice(0, 3).map((article) => (
+              {/* 排序后的洞察数据：APAC -> MENA -> LATAM */}
+              {insightsData
+                .sort((a, b) => {
+                  const order = ['indonesia', 'mena', 'latam'];
+                  return order.indexOf(a.slug.split('-')[0]) - order.indexOf(b.slug.split('-')[0]);
+                })
+                .slice(0, 3)
+                .map((article) => (
                 <Link
                   key={article.slug}
                   href={`/insights/${article.slug}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
                 >
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={article.coverImage}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       {article.tags.map((tag, index) => (
@@ -418,7 +432,7 @@ export default function Home() {
             </div>
 
             <form
-              action="https://formspree.io/f/your-form-id"
+              action="https://formspree.io/f/mqazvoan"
               method="POST"
               className="space-y-6"
             >

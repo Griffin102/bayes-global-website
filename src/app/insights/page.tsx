@@ -1,5 +1,5 @@
 import { insightsData } from "@/data/insights";
-import { ArrowRight, Calendar, Home } from "lucide-react";
+import { ArrowRight, Calendar, Home, Send } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,24 +7,25 @@ import Footer from "@/components/Footer";
 export default function InsightsPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* 全局导航栏 - 带返回首页按钮 */}
-      <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      {/* 洞察页专属导航栏 - 删除双重 Header，只保留此导航 */}
+      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link
-            href="/"
+            href="/#insights"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-blue-600 transition"
           >
             <Home className="w-5 h-5" />
             返回首页
           </Link>
           <Link
-            href="/suppliers"
-            className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
+            href="/#client-form"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
           >
-            Become a Partner
+            <Send className="w-4 h-4" />
+            提交项目需求
           </Link>
         </div>
-      </div>
+      </nav>
 
       <main className="flex-grow">
         {/* Hero */}
