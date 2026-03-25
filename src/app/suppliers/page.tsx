@@ -137,7 +137,7 @@ export default function SuppliersPage() {
                 </h2>
                 <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                   <p>
-                    Hello, I&apos;m Griffin Wang. After 15 years on the front lines of market research in China, I witnessed an incredible trend: today, over 500,000 Chinese enterprises are engaged in foreign trade, all striving to take their brands global.
+                    Hello, I&apos;m Griffin Wang. After 15 years on the front lines of market research in China, we&apos;re witnessing an unprecedented wave: 1 million+ Chinese companies are going abroad, and every single one faces the same challenge—cracking local consumer behavior, navigating cultural nuances, and localizing their offerings. This is exactly why overseas market research demand is at a record peak.
                   </p>
                   <p>
                     I founded Bayes Global to be the strategic solution—a trustworthy bridge built on my experience and backed by the financial integrity of our Hong Kong operating entity. We enable exceptional agencies like yours to securely seize this historic opportunity. I am not just a middleman; I am your project partner and quality guarantor, ensuring a steady flow of high-quality projects and guaranteed payments.
