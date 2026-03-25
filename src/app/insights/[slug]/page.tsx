@@ -1,5 +1,5 @@
 import { insightsData } from "@/data/insights";
-import { ArrowLeft, Calendar, User } from "lucide-react";
+import { ArrowLeft, Calendar, User, Send } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -122,9 +122,9 @@ export default async function InsightArticlePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Back Button - 汉化 */}
-      <div className="bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-4xl mx-auto px-6 py-4">
+      {/* 文章页专属导航栏 */}
+      <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link
             href="/insights"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-blue-600 transition"
@@ -132,8 +132,15 @@ export default async function InsightArticlePage({ params }: PageProps) {
             <ArrowLeft className="w-5 h-5" />
             返回洞察列表
           </Link>
+          <Link
+            href="/#client-form"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all shadow-lg hover:shadow-xl"
+          >
+            <Send className="w-4 h-4" />
+            提交项目需求
+          </Link>
         </div>
-      </div>
+      </nav>
 
       <main className="flex-grow">
         {/* Hero with Cover Image */}

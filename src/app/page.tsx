@@ -241,12 +241,12 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* 右侧：商务调研图片 - Next.js Image 组件 */}
+              {/* 右侧：调研方法配图 - 本地图片 */}
               <div className="relative">
                 <div className="aspect-video rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2670&auto=format&fit=crop"
-                    alt="商务调研场景"
+                    src="/methodology-fgd.jpg"
+                    alt="焦点小组座谈会场景"
                     fill
                     className="object-cover"
                   />
@@ -320,13 +320,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 区块 7：全球执行网络 - 恢复被删除的区块 */}
+        {/* 区块 7：全球执行网络 - 本地地图图片 */}
         <section id="network" className="relative py-24 text-white overflow-hidden">
-          {/* 背景图：深色世界地图风格 */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/map-bg.jpg')" }}
-          ></div>
+          {/* 背景图：本地地图图片 */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/global-map.png"
+              alt="全球执行网络地图"
+              fill
+              className="object-cover"
+            />
+          </div>
           {/* 深色遮罩 */}
           <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
           

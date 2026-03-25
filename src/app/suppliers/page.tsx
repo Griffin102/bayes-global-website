@@ -42,30 +42,32 @@ export default function SuppliersPage() {
       </nav>
 
       <main className="flex-grow">
-        {/* 区块 1：Hero 首屏 - 本地图片 + 深色遮罩 */}
-        <section className="relative py-24 text-white overflow-hidden">
-          {/* 背景图 - 本地图片 */}
-          <div className="absolute inset-0 z-0">
+        {/* 区块 1：Hero 首屏 - 本地图片 + 深色遮罩 - 完整显示图片 */}
+        <section className="relative min-h-[700px] py-24 text-white overflow-hidden">
+          {/* 背景图 - 本地图片，使用 contain 保持完整显示 */}
+          <div className="absolute inset-0 z-0 bg-[#0A192F]">
             <Image
               src="/supplier-hero.jpg"
               alt="Global business network"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
           {/* 深色遮罩 */}
-          <div className="absolute inset-0 bg-[#0A192F]/85 z-10"></div>
+          <div className="absolute inset-0 bg-[#0A192F]/70 z-10"></div>
           
           {/* 内容 */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
-              Powering Global Fieldwork,<br className="hidden md:block" />
-              Connecting You to China&apos;s Going-Global Wave
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
-              Join our trusted network to execute high-quality qualitative research for China&apos;s top enterprises.
-            </p>
+          <div className="relative z-20 max-w-7xl mx-auto px-6 text-center flex items-center justify-center min-h-[500px]">
+            <div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                Powering Global Fieldwork,<br className="hidden md:block" />
+                Connecting You to China&apos;s Going-Global Wave
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+                Join our trusted network to execute high-quality qualitative research for China&apos;s top enterprises.
+              </p>
+            </div>
           </div>
         </section>
 
