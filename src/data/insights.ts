@@ -236,7 +236,7 @@ This mechanism has been proven effective in:
 - Mexico (Mexico City, Guadalajara, Monterrey)
 - Argentina (Buenos Aires)
 - Colombia (Bogotá, Medellín)`,
-    coverImage: "/blog-latam.jpg",
+    coverImage: "/latam-cover.jpg",
     author: "Bayes Global",
     publishDate: "2026-03-22",
     tags: ["风控策略", "拉美市场"],

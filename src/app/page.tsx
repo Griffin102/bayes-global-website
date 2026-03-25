@@ -427,7 +427,7 @@ export default function Home() {
             </div>
 
             <form
-              action="https://formspree.io/f/mqazvoan"
+              action="https://formspree.io/f/myknlrwq"
               method="POST"
               className="space-y-6"
             >

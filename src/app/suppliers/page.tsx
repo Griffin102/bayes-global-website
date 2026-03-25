@@ -42,24 +42,25 @@ export default function SuppliersPage() {
       </nav>
 
       <main className="flex-grow">
-        {/* 区块 1：Hero 首屏 - 本地图片 + 深色遮罩 - 完整显示图片 */}
-        <section className="relative min-h-[700px] py-24 text-white overflow-hidden">
-          {/* 背景图 - 本地图片，使用 contain 保持完整显示 */}
-          <div className="absolute inset-0 z-0 bg-[#0A192F]">
+        {/* 区块 1：Hero 首屏 - 满屏显示，底不就顶 */}
+        <section className="relative h-screen min-h-[800px] text-white overflow-hidden">
+          {/* 背景图 - 满屏显示，底部对齐 */}
+          <div className="absolute inset-0 z-0">
             <Image
               src="/supplier-hero.jpg"
               alt="Global business network"
               fill
-              className="object-contain"
+              className="object-cover"
               priority
+              sizes="100vw"
             />
           </div>
           {/* 深色遮罩 */}
           <div className="absolute inset-0 bg-[#0A192F]/70 z-10"></div>
           
-          {/* 内容 */}
-          <div className="relative z-20 max-w-7xl mx-auto px-6 text-center flex items-center justify-center min-h-[500px]">
-            <div>
+          {/* 内容 - 垂直居中 */}
+          <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex items-center justify-center">
+            <div className="text-center">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
                 Powering Global Fieldwork,<br className="hidden md:block" />
                 Connecting You to China&apos;s Going-Global Wave
@@ -354,7 +355,7 @@ export default function SuppliersPage() {
             </div>
 
             <form
-              action="https://formspree.io/f/mqazvoan"
+              action="https://formspree.io/f/myknlrwq"
               method="POST"
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100"
             >

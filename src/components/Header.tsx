@@ -7,8 +7,9 @@ export default function Header() {
   const pathname = usePathname();
   
   // 不在 /suppliers 页面渲染（该页面有自己的内联导航栏）
-  // 也不在 /supplier/* 路径渲染（旧的供应商路由）
-  if (pathname === '/suppliers' || pathname.startsWith('/supplier')) {
+  // 不在 /supplier/* 路径渲染（旧的供应商路由）
+  // 不在 /insights 和 /insights/* 页面渲染（文章列表和详情页有自己的导航栏）
+  if (pathname === '/suppliers' || pathname.startsWith('/supplier') || pathname === '/insights' || pathname.startsWith('/insights/')) {
     return null;
   }
 

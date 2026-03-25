@@ -45,11 +45,16 @@ export default function InsightsPage() {
           </div>
         </section>
 
-        {/* Articles Grid */}
+        {/* Articles Grid - 排序：印尼 -> 中东 -> 拉美 */}
         <section className="py-24 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {insightsData.map((article) => (
+              {insightsData
+                .sort((a, b) => {
+                  const order = ['indonesia', 'mena', 'latam'];
+                  return order.indexOf(a.slug.split('-')[0]) - order.indexOf(b.slug.split('-')[0]);
+                })
+                .map((article) => (
                 <Link
                   key={article.slug}
                   href={`/insights/${article.slug}`}
