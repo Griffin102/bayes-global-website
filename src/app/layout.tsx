@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans bg-white text-slate-800 antialiased`}>
         <Header />
-        <main className="pt-20">
+        <main className="flex-1 flex flex-col min-h-screen">
           {children}
         </main>
       </body>
