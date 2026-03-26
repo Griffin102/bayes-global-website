@@ -121,7 +121,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col -mt-20">
       {/* 文章页专属导航栏 */}
       <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -142,7 +142,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
         </div>
       </nav>
 
-      <main className="flex-grow pt-16">
+      <main className="flex-grow">
         {/* Hero with Cover Image */}
         <section className="relative">
           <div className="absolute inset-0 h-[400px] bg-gradient-to-b from-slate-900/80 to-slate-900/40 z-10"></div>
