@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function InsightsPage() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col">
       {/* 洞察页专属导航栏 - 删除双重 Header，只保留此导航 */}
       <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -27,7 +27,7 @@ export default function InsightsPage() {
         </div>
       </nav>
 
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         {/* Hero */}
         <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-32 pb-24">
           <div className="max-w-7xl mx-auto px-6">
