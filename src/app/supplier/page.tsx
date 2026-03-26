@@ -3,7 +3,7 @@ import en from '@/data/en.json';
 
 export default function SupplierHome() {
   return (
-    <main>
+    <main className="pt-16">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
